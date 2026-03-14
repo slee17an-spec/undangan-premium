@@ -1,0 +1,30 @@
+body{
+margin:0;
+font-family:sans-serif;
+background:#fafafa;
+text-align:center;
+}
+
+#cover{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+background:linear-gradient(#00000088,#00000088),url(assets/cover.jpg);
+color:white;
+}
+
+section{
+padding:80px 20px;
+}
+
+.gallery img{
+width:300px;
+margin:10px;
+border-radius:10px;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+}
