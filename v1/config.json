@@ -1,0 +1,16 @@
+
+{
+    "nama_panggilan_pria": "Romeo",
+    "nama_panggilan_wanita": "Juliet",
+    "nama_lengkap_pria": "Romeo Montague",
+    "nama_lengkap_wanita": "Juliet Capulet",
+    "ortu_pria": "Putra Pertama dari Bpk. Montague & Ibu Lady Montague",
+    "ortu_wanita": "Putri Pertama dari Bpk. Capulet & Ibu Lady Capulet",
+    "tanggal_akad": "Sabtu, 25 Desember 2026",
+    "waktu_akad": "08.00 - 10.00 WIB",
+    "lokasi_akad": "Hotel Indonesia Kempinski, Jl. M.H. Thamrin No.1, Jakarta",
+    "waktu_resepsi": "19.00 - Selesai",
+    "lokasi_resepsi": "Grand Ballroom, Jakarta",
+    "bg_image": "assets/bg-cover.jpg",
+    "bg_music": "assets/song.mp3"
+}
