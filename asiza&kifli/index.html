@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Wedding Invitation</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="intro">
+<div class="intro-content">
+<h1 id="couple"></h1>
+<p class="subtitle">Dengan hormat mengundang</p>
+<h2 id="guest"></h2>
+<button onclick="openInvite()">Buka Undangan</button>
+</div>
+</div>
+
+<section class="section couple">
+<img src="assets/couple.jpg" class="couple-img">
+<h2 id="heroCouple"></h2>
+</section>
+
+<section class="section story">
+<h2>Cerita Kami</h2>
+<p id="story"></p>
+</section>
+
+<section class="section event">
+<h2>Acara Pernikahan</h2>
+<p id="date"></p>
+<p id="venue"></p>
+<a id="maps" target="_blank">Lihat Lokasi</a>
+</section>
+
+<section class="section countdown">
+<h2>Hari Bahagia</h2>
+<div class="countdown-box">
+<div><span id="days"></span>Hari</div>
+<div><span id="hours"></span>Jam</div>
+<div><span id="minutes"></span>Menit</div>
+<div><span id="seconds"></span>Detik</div>
+</div>
+</section>
+
+<section class="section gallery">
+<h2>Galeri</h2>
+<div id="gallery"></div>
+</section>
+
+<section class="section guestbook">
+<h2>Ucapan & Doa</h2>
+<input id="guestName" placeholder="Nama Anda">
+<textarea id="guestMessage" placeholder="Tulis ucapan"></textarea>
+<button onclick="sendWish()">Kirim</button>
+<div id="wishes"></div>
+</section>
+
+<section class="section rsvp">
+<h2>RSVP</h2>
+<a id="wa">Konfirmasi Kehadiran</a>
+</section>
+
+<audio id="music" loop>
+<source src="assets/music.mp3">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
