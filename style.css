@@ -141,3 +141,12 @@ padding:40px;
 font-size:14px;
 color:#aaa;
 }
+.parallax{
+
+background-attachment:fixed;
+
+background-size:cover;
+
+background-position:center;
+
+}
