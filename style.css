@@ -1,30 +1,168 @@
 body{
 margin:0;
-font-family:sans-serif;
-background:#fafafa;
+font-family:'Poppins',sans-serif;
+background:#f8f8f8;
+color:#333;
 text-align:center;
 }
+
+/* COVER */
 
 #cover{
 height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
-background:linear-gradient(#00000088,#00000088),url(assets/cover.jpg);
+align-items:center;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("assets/cover.jpg") center/cover;
 color:white;
+padding:20px;
 }
 
-section{
-padding:80px 20px;
+#cover h1{
+font-size:42px;
+margin-bottom:10px;
+letter-spacing:2px;
 }
 
-.gallery img{
-width:300px;
-margin:10px;
-border-radius:10px;
+#cover h2{
+font-size:24px;
+font-weight:300;
+margin-bottom:30px;
 }
 
 button{
-padding:15px 30px;
+padding:14px 30px;
+border:none;
+background:#d4af37;
+color:white;
 font-size:18px;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#b8962e;
+}
+
+/* SECTION */
+
+section{
+padding:80px 20px;
+max-width:900px;
+margin:auto;
+}
+
+/* HERO */
+
+.hero img{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+margin-bottom:20px;
+}
+
+.hero h2{
+font-size:36px;
+margin-top:10px;
+color:#222;
+}
+
+/* STORY */
+
+.story p{
+max-width:600px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
+}
+
+/* EVENT */
+
+.event{
+background:white;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.event h2{
+margin-bottom:20px;
+}
+
+.event a{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+background:#333;
+color:white;
+text-decoration:none;
+border-radius:20px;
+}
+
+/* GALLERY */
+
+.gallery{
+background:#fafafa;
+}
+
+#gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+#gallery img{
+width:260px;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+#gallery img:hover{
+transform:scale(1.05);
+}
+
+/* RSVP */
+
+.rsvp{
+background:white;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.rsvp a{
+display:inline-block;
+margin-top:20px;
+padding:14px 28px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-size:18px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+#cover h1{
+font-size:32px;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+#gallery img{
+width:100%;
+height:200px;
+}
+
 }
