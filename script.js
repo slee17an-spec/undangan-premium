@@ -95,7 +95,7 @@ flower.style.left=Math.random()*100+"vw"
 
 flower.style.animationDuration=5+Math.random()*5+"s"
 
-flower.style.fontSize=10+Math.random()*20+"px"
+flower.style.fontSize=6+Math.random()*8+"px"
 
 flowerContainer.appendChild(flower)
 
