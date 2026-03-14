@@ -89,7 +89,7 @@ const flower = document.createElement("div")
 
 flower.classList.add("flower")
 
-flower.innerHTML="🌸"
+flower.innerHTML="❀"
 
 flower.style.left=Math.random()*100+"vw"
 
