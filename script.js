@@ -83,3 +83,30 @@ document.getElementById("countdown").innerHTML =
 days + " Hari Lagi"
 
 },1000)
+const flowerContainer = document.querySelector(".flowers")
+
+function createFlower(){
+
+const flower = document.createElement("div")
+
+flower.classList.add("flower")
+
+flower.innerHTML="🌸"
+
+flower.style.left=Math.random()*100+"vw"
+
+flower.style.animationDuration=5+Math.random()*5+"s"
+
+flower.style.fontSize=10+Math.random()*20+"px"
+
+flowerContainer.appendChild(flower)
+
+setTimeout(()=>{
+
+flower.remove()
+
+},10000)
+
+}
+
+setInterval(createFlower,500)
