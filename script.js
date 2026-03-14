@@ -69,3 +69,17 @@ sec.style.transform = "translateY(0)"
 })
 
 })
+const targetDate = new Date("July 12, 2026 09:00:00").getTime()
+
+setInterval(()=>{
+
+const now = new Date().getTime()
+
+const diff = targetDate - now
+
+const days = Math.floor(diff/(1000*60*60*24))
+
+document.getElementById("countdown").innerHTML =
+days + " Hari Lagi"
+
+},1000)
