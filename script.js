@@ -157,3 +157,19 @@ slides.style.transform="translateX(-"+index*100+"%)"
 
 }
 
+function sendWish(){
+
+const name=document.getElementById("guestName").value
+
+const msg=document.getElementById("guestMessage").value
+
+const box=document.getElementById("wishes")
+
+const item=document.createElement("div")
+
+item.innerHTML="<b>"+name+"</b><br>"+msg
+
+box.prepend(item)
+
+}
+
