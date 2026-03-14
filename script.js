@@ -69,17 +69,6 @@ sec.style.transform = "translateY(0)"
 })
 
 })
-const targetDate = new Date("July 12, 2026 09:00:00").getTime()
-
-setInterval(()=>{
-
-const now = new Date().getTime()
-
-const diff = targetDate - now
-
-const days = Math.floor(diff/(1000*60*60*24))
-
-},1000)
 
 const flowerContainer = document.querySelector(".flowers")
 
@@ -172,4 +161,58 @@ item.innerHTML="<b>"+name+"</b><br>"+msg
 box.prepend(item)
 
 }
+
+/* ========================= */
+/* CINEMATIC OPENING */
+/* ========================= */
+
+window.onload = () => {
+
+const couple = document.getElementById("couple")
+
+couple.style.opacity = 0
+couple.style.transform = "translateY(40px)"
+
+setTimeout(()=>{
+
+couple.style.transition = "1.5s"
+couple.style.opacity = 1
+couple.style.transform = "translateY(0)"
+
+},500)
+
+}
+
+
+/* ========================= */
+/* GOLD FLOWER GENERATOR */
+/* ========================= */
+
+const flowerContainer = document.querySelector(".flowers")
+
+function createFlower(){
+
+const flower = document.createElement("div")
+
+flower.classList.add("flower")
+
+flower.innerHTML = "✦"
+
+flower.style.left = Math.random()*100 + "vw"
+
+flower.style.animationDuration = 5 + Math.random()*5 + "s"
+
+flower.style.fontSize = 5 + Math.random()*5 + "px"
+
+flowerContainer.appendChild(flower)
+
+setTimeout(()=>{
+
+flower.remove()
+
+},10000)
+
+}
+
+setInterval(createFlower,500)
 
