@@ -54,3 +54,18 @@ document.getElementById("cover").style.display="none"
 document.getElementById("music").play()
 
 }
+window.addEventListener("scroll",()=>{
+
+document.querySelectorAll("section").forEach(sec=>{
+
+const pos = sec.getBoundingClientRect().top
+const screen = window.innerHeight
+
+if(pos < screen - 100){
+sec.style.opacity = 1
+sec.style.transform = "translateY(0)"
+}
+
+})
+
+})
