@@ -378,3 +378,14 @@ to{transform:translateY(-2000px);}
 
 }
 
+.flower{
+
+position:absolute;
+top:-50px;
+color:#FFD700;
+font-size:8px;
+animation:fall linear infinite;
+opacity:0.9;
+
+}
+
