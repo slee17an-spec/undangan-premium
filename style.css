@@ -166,3 +166,8 @@ height:200px;
 }
 
 }
+section{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
