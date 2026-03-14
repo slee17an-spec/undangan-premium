@@ -231,3 +231,45 @@ color:gold;
 font-weight:bold;
 
 }
+
+.timeline{
+background:#111;
+border-radius:20px;
+padding:80px 20px;
+}
+
+.timeline-container{
+position:relative;
+max-width:800px;
+margin:auto;
+}
+
+.timeline-container::before{
+content:'';
+position:absolute;
+left:50%;
+width:2px;
+height:100%;
+background:gold;
+}
+
+.timeline-item{
+position:relative;
+width:50%;
+padding:20px;
+box-sizing:border-box;
+}
+
+.timeline-item:nth-child(odd){
+left:0;
+text-align:right;
+}
+
+.timeline-item:nth-child(even){
+left:50%;
+}
+
+.timeline-item h3{
+color:gold;
+}
+
