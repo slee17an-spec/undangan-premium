@@ -134,3 +134,26 @@ document.getElementById("minutes").innerHTML = minutes
 document.getElementById("seconds").innerHTML = seconds
 
 },1000)
+
+let index=0
+
+const slides=document.getElementById("gallery")
+
+document.getElementById("next").onclick=()=>{
+
+index++
+
+slides.style.transform="translateX(-"+index*100+"%)"
+
+}
+
+document.getElementById("prev").onclick=()=>{
+
+index--
+
+if(index<0)index=0
+
+slides.style.transform="translateX(-"+index*100+"%)"
+
+}
+
