@@ -79,10 +79,8 @@ const diff = targetDate - now
 
 const days = Math.floor(diff/(1000*60*60*24))
 
-document.getElementById("countdown").innerHTML =
-days + " Hari Lagi"
-
 },1000)
+
 const flowerContainer = document.querySelector(".flowers")
 
 function createFlower(){
