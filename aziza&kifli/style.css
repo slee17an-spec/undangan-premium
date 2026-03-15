@@ -131,3 +131,28 @@ cursor:pointer;
 font-size:18px;
 display:block;
 }
+
+.door{
+position:absolute;
+top:0;
+width:50%;
+height:100%;
+background:rgba(255,255,255,0.8);
+transition:1.2s;
+}
+
+.doorLeft{
+left:0;
+}
+
+.doorRight{
+right:0;
+}
+
+.open .doorLeft{
+transform:translateX(-100%);
+}
+
+.open .doorRight{
+transform:translateX(100%);
+}
