@@ -47,3 +47,13 @@ const guest = params.get("to")
 if(guest){
 document.querySelector(".guest").innerText = guest
 }
+
+function goSection(n){
+
+const sections = document.querySelectorAll(".page")
+
+sections[n].scrollIntoView({
+behavior:"smooth"
+})
+
+}
