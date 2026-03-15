@@ -4,7 +4,7 @@ background:#e6e1d8;
 display:flex;
 justify-content:center;
 font-family:serif;
-color:#5b3b3b;
+color:#5a3a3a;
 }
 
 .wrapper{
@@ -18,14 +18,14 @@ box-shadow:0 0 25px rgba(0,0,0,0.25);
 height:100vh;
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
 position:relative;
 display:flex;
 align-items:center;
 justify-content:center;
+text-align:center;
+padding:20px;
 }
 
-/* Background */
 .bg1{background-image:url("assets/bg1.png");}
 .bg2{background-image:url("assets/bg2.png");}
 .bg3{background-image:url("assets/bg3.png");}
@@ -34,118 +34,79 @@ justify-content:center;
 .bg6{background-image:url("assets/bg6.png");}
 .bg7{background-image:url("assets/bg7.png");}
 
-/* COVER */
-.coverBox{
+.coverContent{
 position:absolute;
-bottom:180px;
-text-align:center;
+top:120px;
+width:100%;
 }
 
-#openBtn{
-margin-top:15px;
-padding:14px 30px;
-border-radius:30px;
-background:#7b4a5a;
-color:white;
-border:none;
-font-size:16px;
+.monogram{
+font-size:60px;
+color:#7b4a5a;
+font-weight:bold;
 }
 
-/* QUOTE */
-.quoteBox{
-position:absolute;
-top:220px;
-padding:0 30px;
-text-align:center;
-line-height:1.6;
+.couple{
+letter-spacing:2px;
 }
 
-/* COUPLE */
-.coupleBox{
-position:absolute;
-top:200px;
-text-align:center;
-line-height:1.8;
+.gold{
+color:#7b4a5a;
 }
 
-/* COUNTDOWN */
-.countdownBox{
-position:absolute;
-bottom:220px;
+.countdown{
 display:flex;
-gap:12px;
+gap:10px;
+justify-content:center;
 }
 
-.timeBox{
-width:70px;
+.box{
 background:white;
-border-radius:10px;
 padding:10px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
+border-radius:10px;
+width:70px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
-.timeBox span{
+.box span{
 font-size:22px;
 font-weight:bold;
-display:block;
 }
 
-.timeBox p{
-margin:0;
-font-size:12px;
-}
-
-.rsvpBtn{
-position:absolute;
-bottom:160px;
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:12px 26px;
 background:#7b4a5a;
 color:white;
-padding:12px 25px;
 border-radius:25px;
 text-decoration:none;
 }
 
-/* AKAD */
-.akadBox{
-position:absolute;
-top:230px;
-text-align:center;
-}
-
-/* MAPS */
-.mapsBox{
-position:absolute;
-top:240px;
-text-align:center;
-}
-
-/* GIFT */
-.giftBox{
-position:absolute;
-top:220px;
-text-align:center;
-}
-
-button{
-padding:10px 20px;
-background:#7b4a5a;
-color:white;
-border:none;
-border-radius:20px;
-cursor:pointer;
-}
-
-/* BOTTOM NAV */
-
-.bottomNav{
+.nav{
 position:absolute;
 bottom:0;
-height:55px;
 width:100%;
-background:#d5c5a6;
+background:#d7c6a6;
 display:flex;
 justify-content:space-around;
-align-items:center;
+padding:10px 0;
 font-size:12px;
+}
+
+.card{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.rekeningNumber{
+font-size:20px;
+font-weight:bold;
+}
+
+.map{
+width:100%;
+border-radius:15px;
 }
