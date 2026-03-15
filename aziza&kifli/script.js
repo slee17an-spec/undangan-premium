@@ -57,3 +57,18 @@ behavior:"smooth"
 })
 
 }
+
+openBtn.addEventListener("click",()=>{
+
+document.querySelector("section").classList.add("open")
+
+music.play()
+
+setTimeout(()=>{
+window.scrollTo({
+top:window.innerHeight,
+behavior:"smooth"
+})
+},1200)
+
+})
