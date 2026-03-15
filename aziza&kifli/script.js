@@ -1,20 +1,36 @@
-const openBtn = document.getElementById("openBtn")
-const music = document.getElementById("music")
+// OPEN INVITATION
 
-openBtn.addEventListener("click",()=>{
+function openInvitation(){
 
+document.querySelector(".leftDoor").style.transform="translateX(-100%)"
+
+document.querySelector(".rightDoor").style.transform="translateX(100%)"
+
+document.getElementById("music").play()
+
+}
+
+
+// MUSIC
+
+function toggleMusic(){
+
+let music=document.getElementById("music")
+
+if(music.paused){
 music.play()
+}else{
+music.pause()
+}
 
-window.scrollTo({
-top:window.innerHeight,
-behavior:"smooth"
-})
+}
 
-})
+
+// SCROLL NAVIGATION
 
 function goSection(n){
 
-const sections = document.querySelectorAll(".page")
+let sections=document.querySelectorAll(".page")
 
 sections[n-1].scrollIntoView({
 behavior:"smooth"
@@ -23,37 +39,66 @@ behavior:"smooth"
 }
 
 
-const params = new URLSearchParams(window.location.search)
-const guest = params.get("to")
+// NAMA TAMU URL
+
+const params=new URLSearchParams(window.location.search)
+
+const guest=params.get("to")
 
 if(guest){
-document.querySelector(".guestName").innerText = guest
+
+document.querySelector(".guestName").innerText=guest
+
 }
 
 
-const weddingDate = new Date("2026-03-30T19:00:00")
-
-setInterval(()=>{
-
-const now = new Date()
-const diff = weddingDate - now
-
-const days = Math.floor(diff/(1000*60*60*24))
-const hours = Math.floor((diff/(1000*60*60))%24)
-const minutes = Math.floor((diff/1000/60)%60)
-const seconds = Math.floor((diff/1000)%60)
-
-document.getElementById("days").innerText = days
-document.getElementById("hours").innerText = hours
-document.getElementById("minutes").innerText = minutes
-document.getElementById("seconds").innerText = seconds
-
-},1000)
-
+// COPY DANA
 
 function copyDana(){
 
 navigator.clipboard.writeText("082211864752")
-alert("Nomor DANA berhasil disalin")
+
+alert("Nomor DANA disalin")
 
 }
+
+
+// RSVP WHATSAPP
+
+function sendRSVP(){
+
+let nama=document.querySelector(".guestName").innerText
+
+let pesan=`Assalamualaikum, saya ${nama} akan menghadiri undangan.`
+
+let url=`https://wa.me/6282211864752?text=${encodeURIComponent(pesan)}`
+
+window.open(url)
+
+}
+
+
+// COUNTDOWN
+
+let target=new Date("March 30, 2026 19:00:00").getTime()
+
+setInterval(()=>{
+
+let now=new Date().getTime()
+
+let jarak=target-now
+
+let hari=Math.floor(jarak/(1000*60*60*24))
+
+let jam=Math.floor((jarak%(1000*60*60*24))/(1000*60*60))
+
+let menit=Math.floor((jarak%(1000*60*60))/(1000*60))
+
+let detik=Math.floor((jarak%(1000*60))/1000)
+
+document.getElementById("hari").innerHTML=hari
+document.getElementById("jam").innerHTML=jam
+document.getElementById("menit").innerHTML=menit
+document.getElementById("detik").innerHTML=detik
+
+},1000)
