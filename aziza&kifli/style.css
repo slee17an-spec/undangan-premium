@@ -23,7 +23,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
+padding-bottom:70px;
 }
 
 .bg1{background-image:url("assets/bg1.png");}
@@ -96,13 +96,29 @@ cursor:pointer;
 }
 
 .nav{
-position:absolute;
+
+position:fixed;
+
 bottom:0;
+
+left:50%;
+
+transform:translateX(-50%);
+
 width:100%;
+
+max-width:420px;
+
 background:#d7c6a6;
+
 display:flex;
+
 justify-content:space-around;
+
 padding:8px 0;
+
+z-index:999;
+
 }
 
 .navItem{
