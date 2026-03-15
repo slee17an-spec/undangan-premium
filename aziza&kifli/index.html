@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aziza & Kifli Wedding</title>
+<title>Undangan Aziza & Kifli</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -15,52 +16,38 @@
 
 <body>
 
-<!-- MUSIC -->
-<audio id="music" loop>
-<source src="assets/music/janji-suci.mp3" type="audio/mp3">
-</audio>
+<div class="wrapper">
 
-<!-- MUSIC BUTTON -->
-
-<div class="musicBtn" onclick="toggleMusic()">
-🎵
-</div>
-
-<!-- FOG EFFECT -->
-
-<div class="fog">
-<div class="fog1"></div>
-<div class="fog2"></div>
-</div>
 
 <!-- COVER -->
 
-<section class="page bg1 cover">
-
-<div class="door leftDoor"></div>
-<div class="door rightDoor"></div>
+<section class="page bg1">
 
 <div class="coverContent">
 
 <p class="date">
-Senin <br>
+Senin<br>
 30 Maret 2026
 </p>
 
 <h1 class="monogram">A & K</h1>
 
-<h2 class="couple">AZIZA & KIFLI</h2>
+<h2 class="couple">
+AZIZA & KIFLI
+</h2>
 
 <p class="save">SAVE THE DATE</p>
+
+<br>
 
 <p>Kepada Yth</p>
 <p>Bapak/Ibu/Saudara/i</p>
 
-<p class="guestName">Tamu Undangan</p>
+<p class="guestName">Nama Tamu</p>
 
-<button id="openBtn" onclick="openInvitation()">
-Open Invitation
-</button>
+<button id="openBtn">Open Invitation</button>
+
+</div>
 
 </div>
 
@@ -79,8 +66,11 @@ Open Invitation
 
 Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
 untukmu pasangan hidup dari jenismu sendiri,
-supaya kamu merasa tenteram kepadanya,
+supaya kamu cenderung dan merasa tenteram kepadanya,
 dan dijadikan-Nya di antaramu rasa kasih dan sayang.
+
+Sesungguhnya pada yang demikian itu benar-benar terdapat
+tanda-tanda bagi kaum yang berfikir.
 
 </p>
 
@@ -97,22 +87,28 @@ dan dijadikan-Nya di antaramu rasa kasih dan sayang.
 
 <div class="content">
 
-<h2>Wafiah Aziza</h2>
+<p class="bismillah">
+Bismillahirrahmanirrahim
+</p>
+
+<p class="intro">
+
+Dengan memohon Rahmat dan Ridho Allah SWT
+kami bermaksud menyelenggarakan
+Akad & Resepsi Pernikahan Putra-Putri kami
+
+</p>
+
+<h2 class="gold">Wafiah Aziza</h2>
 
 <p>Putri pertama dari</p>
-
 <p>Bapak Takdir & Ibu Hj. Sarini</p>
 
-<br>
+<p class="dengan">DENGAN</p>
 
-<h2>&</h2>
-
-<br>
-
-<h2>Sulkifli</h2>
+<h2 class="gold">Sulkifli</h2>
 
 <p>Putra pertama dari</p>
-
 <p>Bapak Basri & Ibu Suryani</p>
 
 </div>
@@ -129,30 +125,36 @@ dan dijadikan-Nya di antaramu rasa kasih dan sayang.
 <div class="countdown">
 
 <div class="box">
-<span id="hari"></span>
+<span id="days">0</span>
 <p>Hari</p>
 </div>
 
 <div class="box">
-<span id="jam"></span>
+<span id="hours">0</span>
 <p>Jam</p>
 </div>
 
 <div class="box">
-<span id="menit"></span>
+<span id="minutes">0</span>
 <p>Menit</p>
 </div>
 
 <div class="box">
-<span id="detik"></span>
+<span id="seconds">0</span>
 <p>Detik</p>
 </div>
 
 </div>
 
-<button class="btn" onclick="sendRSVP()">
+<p class="info">
+Kirim ucapan untuk mempelai
+dan konfirmasi kehadiran
+</p>
+
+<a class="btn"
+href="https://wa.me/6282211864752">
 Kirim Ucapan RSVP
-</button>
+</a>
 
 </div>
 
@@ -165,26 +167,28 @@ Kirim Ucapan RSVP
 
 <div class="content">
 
-<h2>Akad Nikah</h2>
+<h1 class="title">AKAD NIKAH</h1>
 
-<p>Senin, 30 Maret 2026</p>
+<p class="dateBig">
+Senin, 30 Maret 2026
+</p>
 
 <p>Pukul 19.00 WITA</p>
 
 <br>
 
-<p>Dusun Timundu</p>
+<p class="locTitle">LOKASI ACARA</p>
 
-<p>Desa Kombo</p>
+<p>
+Dusun Timundu<br>
+Desa Kombo
+</p>
 
 <br>
 
-<a href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA" target="_blank">
-
-<button class="btn">
-Buka Google Maps
-</button>
-
+<a class="btn"
+href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
+Link Google Maps
 </a>
 
 </div>
@@ -192,24 +196,17 @@ Buka Google Maps
 </section>
 
 
-<!-- MAP -->
+<!-- MAPS -->
 
 <section class="page bg6">
 
 <div class="content">
 
-<h2>Lokasi Acara</h2>
+<h1>Maps</h1>
 
-<p>Dusun Timundu, Desa Kombo</p>
-
-<br>
-
-<a href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA" target="_blank">
-
-<button class="btn">
+<a class="btn"
+href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
 Buka Google Maps
-</button>
-
 </a>
 
 </div>
@@ -223,64 +220,52 @@ Buka Google Maps
 
 <div class="content">
 
-<h2>Amplop Digital</h2>
+<h1>Amplop Digital</h1>
 
 <p>DANA</p>
 
-<h3>082211864752</h3>
+<h2>082211864752</h2>
 
-<button class="btn" onclick="copyDana()">
+<button onclick="copyDana()">
 Salin Nomor
 </button>
 
 <br><br>
 
-<div class="bankCard">
+<div class="card">
 
 <p>Bank BRI</p>
 
-<p>No Rekening :</p>
+<p>Nomor Rekening</p>
 
-<p>.....................</p>
+<p class="rekeningNumber">
+XXXX XXXX XXXX
+</p>
+
+<p>a.n Aziza / Kifli</p>
 
 </div>
 
+<br>
+
 <p>Alamat Pengiriman Kado</p>
 
-<p>Dusun Timundu</p>
-
-<p>Desa Kombo</p>
+<p>
+Dusun Timundu<br>
+Desa Kombo
+</p>
 
 </div>
 
 </section>
 
 
-<!-- NAV -->
-
-<div class="nav">
-
-<div onclick="goSection(3)">
-👫
-<p>Couple</p>
 </div>
 
-<div onclick="goSection(2)">
-💬
-<p>Quotes</p>
-</div>
 
-<div onclick="goSection(4)">
-💌
-<p>RSVP</p>
-</div>
-
-<div onclick="goSection(6)">
-📍
-<p>Maps</p>
-</div>
-
-</div>
+<audio id="music" loop>
+<source src="assets/music/janji-suci.mp3">
+</audio>
 
 <script src="script.js"></script>
 
