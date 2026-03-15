@@ -12,6 +12,24 @@ behavior:"smooth"
 
 })
 
+function goSection(n){
+
+const sections = document.querySelectorAll(".page")
+
+sections[n-1].scrollIntoView({
+behavior:"smooth"
+})
+
+}
+
+
+const params = new URLSearchParams(window.location.search)
+const guest = params.get("to")
+
+if(guest){
+document.querySelector(".guestName").innerText = guest
+}
+
 
 const weddingDate = new Date("2026-03-30T19:00:00")
 
@@ -39,36 +57,3 @@ navigator.clipboard.writeText("082211864752")
 alert("Nomor DANA berhasil disalin")
 
 }
-
-// ambil nama tamu dari url
-const params = new URLSearchParams(window.location.search)
-const guest = params.get("to")
-
-if(guest){
-document.querySelector(".guest").innerText = guest
-}
-
-function goSection(n){
-
-const sections = document.querySelectorAll(".page")
-
-sections[n].scrollIntoView({
-behavior:"smooth"
-})
-
-}
-
-openBtn.addEventListener("click",()=>{
-
-document.querySelector("section").classList.add("open")
-
-music.play()
-
-setTimeout(()=>{
-window.scrollTo({
-top:window.innerHeight,
-behavior:"smooth"
-})
-},1200)
-
-})
