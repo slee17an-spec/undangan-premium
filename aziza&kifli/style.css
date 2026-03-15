@@ -2,6 +2,7 @@ body{
 margin:0;
 font-family:serif;
 color:#5a3c3c;
+overflow-x:hidden;
 }
 
 .page{
@@ -22,13 +23,11 @@ background-repeat:no-repeat;
 .bg6{background-image:url("assets/bg6.png");}
 .bg7{background-image:url("assets/bg7.png");}
 
-
-.content{
-background:rgba(255,255,255,0.6);
+.overlay{
+background:rgba(255,255,255,0.7);
 padding:40px;
 border-radius:15px;
 max-width:500px;
-text-align:center;
 }
 
 .center{
@@ -36,7 +35,11 @@ text-align:center;
 }
 
 h1{
+margin:10px 0;
 font-size:40px;
+}
+
+h2{
 margin:10px 0;
 }
 
@@ -49,17 +52,6 @@ border-radius:25px;
 text-decoration:none;
 }
 
-#countdown{
-display:flex;
-gap:20px;
-justify-content:center;
-}
-
-#countdown span{
-font-size:30px;
-font-weight:bold;
-}
-
 button{
 padding:10px 20px;
 background:#7b4a5a;
@@ -67,4 +59,26 @@ color:white;
 border:none;
 border-radius:20px;
 cursor:pointer;
+}
+
+#openBtn{
+margin-top:20px;
+padding:14px 30px;
+font-size:18px;
+}
+
+#countdown{
+display:flex;
+gap:20px;
+justify-content:center;
+}
+
+.timeBox span{
+font-size:30px;
+font-weight:bold;
+}
+
+.quote{
+font-size:18px;
+line-height:1.6;
 }
