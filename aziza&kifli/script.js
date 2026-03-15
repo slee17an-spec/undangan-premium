@@ -12,6 +12,7 @@ behavior:"smooth"
 
 })
 
+
 const weddingDate = new Date("2026-03-30T19:00:00")
 
 setInterval(()=>{
@@ -35,6 +36,6 @@ document.getElementById("seconds").innerText = seconds
 function copyDana(){
 
 navigator.clipboard.writeText("082211864752")
-alert("Nomor DANA disalin")
+alert("Nomor DANA berhasil disalin")
 
 }
