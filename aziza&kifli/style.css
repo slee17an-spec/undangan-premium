@@ -11,6 +11,7 @@ align-items:center;
 justify-content:center;
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 }
 
 .bg1{background-image:url("assets/bg1.png");}
@@ -20,6 +21,7 @@ background-position:center;
 .bg5{background-image:url("assets/bg5.png");}
 .bg6{background-image:url("assets/bg6.png");}
 .bg7{background-image:url("assets/bg7.png");}
+
 
 .content{
 background:rgba(255,255,255,0.6);
