@@ -1,23 +1,40 @@
-const btn=document.getElementById('openBtn');
-const music=document.getElementById('music');
+const openBtn = document.getElementById("openBtn")
+const music = document.getElementById("music")
 
-btn.addEventListener('click',()=>{
-music.play().catch(()=>{});
+openBtn.addEventListener("click",()=>{
+
+music.play()
+
 window.scrollTo({
 top:window.innerHeight,
 behavior:"smooth"
-});
-});
+})
+
+})
+
+const weddingDate = new Date("2026-03-30T19:00:00")
+
+setInterval(()=>{
+
+const now = new Date()
+const diff = weddingDate - now
+
+const days = Math.floor(diff/(1000*60*60*24))
+const hours = Math.floor((diff/(1000*60*60))%24)
+const minutes = Math.floor((diff/1000/60)%60)
+const seconds = Math.floor((diff/1000)%60)
+
+document.getElementById("days").innerText = days
+document.getElementById("hours").innerText = hours
+document.getElementById("minutes").innerText = minutes
+document.getElementById("seconds").innerText = seconds
+
+},1000)
+
 
 function copyDana(){
-const text=document.getElementById("dana").innerText;
-navigator.clipboard.writeText(text);
-alert("Nomor DANA disalin");
+
+navigator.clipboard.writeText("082211864752")
+alert("Nomor DANA disalin")
+
 }
-"""
-
-with open(os.path.join(base,"index.html"),"w") as f: f.write(index_html)
-with open(os.path.join(base,"style.css"),"w") as f: f.write(style_css)
-with open(os.path.join(base,"script.js"),"w") as f: f.write(script_js)
-
-os.makedirs(os.path.join(base,"music"),exist_ok=True)
