@@ -310,3 +310,26 @@ border-radius:25px;
 text-decoration:none;
 
 }
+
+.bottomNav{
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+
+height:60px;
+
+background:#d9cbb2;
+
+display:flex;
+
+justify-content:space-around;
+
+align-items:center;
+
+font-size:12px;
+
+}
+
