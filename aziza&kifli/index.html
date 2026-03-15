@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Undangan Aziza & Kifli</title>
+<title>Aziza & Kifli Wedding</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,59 +15,52 @@
 
 <body>
 
-<div class="wrapper">
-<div class="nav">
+<!-- MUSIC -->
+<audio id="music" loop>
+<source src="assets/music/janji-suci.mp3" type="audio/mp3">
+</audio>
 
-<div class="navItem" onclick="goSection(3)">
-<span>👫</span>
-<p>Couple</p>
+<!-- MUSIC BUTTON -->
+
+<div class="musicBtn" onclick="toggleMusic()">
+🎵
 </div>
 
-<div class="navItem" onclick="goSection(2)">
-<span>💬</span>
-<p>Quotes</p>
-</div>
+<!-- FOG EFFECT -->
 
-<div class="navItem" onclick="goSection(4)">
-<span>💌</span>
-<p>RSVP</p>
+<div class="fog">
+<div class="fog1"></div>
+<div class="fog2"></div>
 </div>
-
-<div class="navItem" onclick="goSection(6)">
-<span>📍</span>
-<p>Maps</p>
-</div>
-
-</div>
-
 
 <!-- COVER -->
 
-<section class="page bg1">
+<section class="page bg1 cover">
+
+<div class="door leftDoor"></div>
+<div class="door rightDoor"></div>
 
 <div class="coverContent">
 
 <p class="date">
-Senin<br>
+Senin <br>
 30 Maret 2026
 </p>
 
 <h1 class="monogram">A & K</h1>
 
-<h2 class="couple">
-AZIZA & KIFLI
-</h2>
+<h2 class="couple">AZIZA & KIFLI</h2>
 
 <p class="save">SAVE THE DATE</p>
-
-<br>
 
 <p>Kepada Yth</p>
 <p>Bapak/Ibu/Saudara/i</p>
 
-<p class="guestName">Nama Tamu</p>
+<p class="guestName">Tamu Undangan</p>
 
-<button id="openBtn">Open Invitation</button>
+<button id="openBtn" onclick="openInvitation()">
+Open Invitation
+</button>
 
 </div>
 
@@ -87,11 +79,8 @@ AZIZA & KIFLI
 
 Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
 untukmu pasangan hidup dari jenismu sendiri,
-supaya kamu cenderung dan merasa tenteram kepadanya,
+supaya kamu merasa tenteram kepadanya,
 dan dijadikan-Nya di antaramu rasa kasih dan sayang.
-
-Sesungguhnya pada yang demikian itu benar-benar terdapat
-tanda-tanda bagi kaum yang berfikir.
 
 </p>
 
@@ -108,28 +97,22 @@ tanda-tanda bagi kaum yang berfikir.
 
 <div class="content">
 
-<p class="bismillah">
-Bismillahirrahmanirrahim
-</p>
-
-<p class="intro">
-
-Dengan memohon Rahmat dan Ridho Allah SWT
-kami bermaksud menyelenggarakan
-Akad & Resepsi Pernikahan Putra-Putri kami
-
-</p>
-
-<h2 class="gold">Wafiah Aziza</h2>
+<h2>Wafiah Aziza</h2>
 
 <p>Putri pertama dari</p>
+
 <p>Bapak Takdir & Ibu Hj. Sarini</p>
 
-<p class="dengan">DENGAN</p>
+<br>
 
-<h2 class="gold">Sulkifli</h2>
+<h2>&</h2>
+
+<br>
+
+<h2>Sulkifli</h2>
 
 <p>Putra pertama dari</p>
+
 <p>Bapak Basri & Ibu Suryani</p>
 
 </div>
@@ -146,36 +129,30 @@ Akad & Resepsi Pernikahan Putra-Putri kami
 <div class="countdown">
 
 <div class="box">
-<span id="days">0</span>
+<span id="hari"></span>
 <p>Hari</p>
 </div>
 
 <div class="box">
-<span id="hours">0</span>
+<span id="jam"></span>
 <p>Jam</p>
 </div>
 
 <div class="box">
-<span id="minutes">0</span>
+<span id="menit"></span>
 <p>Menit</p>
 </div>
 
 <div class="box">
-<span id="seconds">0</span>
+<span id="detik"></span>
 <p>Detik</p>
 </div>
 
 </div>
 
-<p class="info">
-Kirim ucapan untuk mempelai
-dan konfirmasi kehadiran
-</p>
-
-<a class="btn"
-href="https://wa.me/6282211864752">
+<button class="btn" onclick="sendRSVP()">
 Kirim Ucapan RSVP
-</a>
+</button>
 
 </div>
 
@@ -188,28 +165,26 @@ Kirim Ucapan RSVP
 
 <div class="content">
 
-<h1 class="title">AKAD NIKAH</h1>
+<h2>Akad Nikah</h2>
 
-<p class="dateBig">
-Senin, 30 Maret 2026
-</p>
+<p>Senin, 30 Maret 2026</p>
 
 <p>Pukul 19.00 WITA</p>
 
 <br>
 
-<p class="locTitle">LOKASI ACARA</p>
+<p>Dusun Timundu</p>
 
-<p>
-Dusun Timundu<br>
-Desa Kombo
-</p>
+<p>Desa Kombo</p>
 
 <br>
 
-<a class="btn"
-href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
-Link Google Maps
+<a href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA" target="_blank">
+
+<button class="btn">
+Buka Google Maps
+</button>
+
 </a>
 
 </div>
@@ -217,17 +192,24 @@ Link Google Maps
 </section>
 
 
-<!-- MAPS -->
+<!-- MAP -->
 
 <section class="page bg6">
 
 <div class="content">
 
-<h1>Maps</h1>
+<h2>Lokasi Acara</h2>
 
-<a class="btn"
-href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
+<p>Dusun Timundu, Desa Kombo</p>
+
+<br>
+
+<a href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA" target="_blank">
+
+<button class="btn">
 Buka Google Maps
+</button>
+
 </a>
 
 </div>
@@ -241,52 +223,64 @@ Buka Google Maps
 
 <div class="content">
 
-<h1>Amplop Digital</h1>
+<h2>Amplop Digital</h2>
 
 <p>DANA</p>
 
-<h2>082211864752</h2>
+<h3>082211864752</h3>
 
-<button onclick="copyDana()">
+<button class="btn" onclick="copyDana()">
 Salin Nomor
 </button>
 
 <br><br>
 
-<div class="card">
+<div class="bankCard">
 
 <p>Bank BRI</p>
 
-<p>Nomor Rekening</p>
+<p>No Rekening :</p>
 
-<p class="rekeningNumber">
-XXXX XXXX XXXX
-</p>
-
-<p>a.n Aziza / Kifli</p>
+<p>.....................</p>
 
 </div>
 
-<br>
-
 <p>Alamat Pengiriman Kado</p>
 
-<p>
-Dusun Timundu<br>
-Desa Kombo
-</p>
+<p>Dusun Timundu</p>
+
+<p>Desa Kombo</p>
 
 </div>
 
 </section>
 
 
+<!-- NAV -->
+
+<div class="nav">
+
+<div onclick="goSection(3)">
+👫
+<p>Couple</p>
 </div>
 
+<div onclick="goSection(2)">
+💬
+<p>Quotes</p>
+</div>
 
-<audio id="music" loop>
-<source src="assets/music/janji-suci.mp3">
-</audio>
+<div onclick="goSection(4)">
+💌
+<p>RSVP</p>
+</div>
+
+<div onclick="goSection(6)">
+📍
+<p>Maps</p>
+</div>
+
+</div>
 
 <script src="script.js"></script>
 
