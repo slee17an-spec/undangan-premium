@@ -1,45 +1,192 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Undangan Wafiah & Sulkifli</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<section class="cover" style="background-image:url('assets/bg1.png')">
-<div class="overlay">
+<!-- COVER -->
+<section class="page bg1">
+
+<div class="content center">
+
+<h3>Senin, 30 Maret 2026</h3>
+
+<h1>Wafiah & Sulkifli</h1>
+
+<p>Kepada Yth</p>
+<p id="guest">Nama Tamu</p>
+
 <button id="openBtn">Open Invitation</button>
+
 </div>
+
 </section>
 
-<div id="mainContent">
 
-<section class="panel" style="background-image:url('assets/bg2.png')"></section>
+<!-- QUOTE -->
+<section class="page bg2">
 
-<section class="panel" style="background-image:url('assets/bg3.png')"></section>
+<div class="content">
 
-<section class="panel" style="background-image:url('assets/bg4.png')"></section>
+<p class="quote">
 
-<section class="panel" style="background-image:url('assets/bg5.png')"></section>
+Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+untukmu pasangan hidup dari jenismu sendiri,
+supaya kamu merasa tenteram kepadanya,
+dan dijadikan-Nya di antaramu rasa kasih dan sayang.
 
-<section class="panel" style="background-image:url('assets/bg6.png')"></section>
-
-<section class="gift">
-<div class="giftCard">
-<h2>Amplop Digital</h2>
-<p>DANA</p>
-<b id="dana">082211864752</b>
 <br><br>
-<button onclick="copyDana()">Salin Nomor</button>
-<br><br>
-<p>Alamat Pengiriman Kado</p>
+(QS Ar-Rum : 21)
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- COUPLE -->
+<section class="page bg3">
+
+<div class="content">
+
+<h2>Wafiah Aziza</h2>
+<p>Putri pertama dari</p>
+<p>Bapak Takdir & Ibu Hj. Sarini</p>
+
+<br>
+
+<h2>&</h2>
+
+<br>
+
+<h2>Sulkifli</h2>
+<p>Putra pertama dari</p>
+<p>Bapak Basri & Ibu Suryani</p>
+
+</div>
+
+</section>
+
+
+<!-- COUNTDOWN -->
+<section class="page bg4">
+
+<div class="content center">
+
+<div id="countdown">
+
+<div>
+<span id="days">0</span>
+<p>Hari</p>
+</div>
+
+<div>
+<span id="hours">0</span>
+<p>Jam</p>
+</div>
+
+<div>
+<span id="minutes">0</span>
+<p>Menit</p>
+</div>
+
+<div>
+<span id="seconds">0</span>
+<p>Detik</p>
+</div>
+
+</div>
+
+<br>
+
+<a class="btn" href="https://wa.me/6282211864752">
+Kirim Ucapan RSVP
+</a>
+
+</div>
+
+</section>
+
+
+<!-- AKAD -->
+<section class="page bg5">
+
+<div class="content center">
+
+<h1>Akad Nikah</h1>
+
+<p>Senin, 30 Maret 2026</p>
+
+<p>Pukul 19.00 WITA</p>
+
+<br>
+
+<p>Dusun Timundu</p>
+<p>Desa Kombo</p>
+
+<br>
+
+<a class="btn" href="#">
+Buka Google Maps
+</a>
+
+</div>
+
+</section>
+
+
+<!-- MAPS -->
+<section class="page bg6">
+
+<div class="content center">
+
+<h1>Lokasi Acara</h1>
+
 <p>Dusun Timundu, Desa Kombo</p>
-</div>
-</section>
+
+<br>
+
+<a class="btn" href="#">
+Buka Google Maps
+</a>
 
 </div>
+
+</section>
+
+
+<!-- GIFT -->
+<section class="page bg7">
+
+<div class="content center">
+
+<h1>Amplop Digital</h1>
+
+<p>DANA</p>
+
+<h2 id="dana">082211864752</h2>
+
+<button onclick="copyDana()">Salin Nomor</button>
+
+<br><br>
+
+<p>Alamat Pengiriman Kado</p>
+
+<p>Dusun Timundu<br>Desa Kombo</p>
+
+</div>
+
+</section>
+
 
 <audio id="music" loop>
 <source src="music/janji-suci.mp3" type="audio/mpeg">
