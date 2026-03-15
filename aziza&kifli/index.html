@@ -8,27 +8,32 @@
 </head>
 <body>
 
-<div id="cover" class="section cover">
-  <img src="assets/section1.png" class="bg">
-  <div class="center">
-    <button id="openBtn">Open Invitation</button>
-  </div>
+<section class="cover" style="background-image:url('assets/bg1.png')">
+<div class="overlay">
+<button id="openBtn">Open Invitation</button>
 </div>
+</section>
 
-<div id="content" style="display:none">
+<div id="mainContent">
 
-<section class="section"><img src="assets/section2.png"></section>
-<section class="section"><img src="assets/section3.png"></section>
-<section class="section"><img src="assets/section4.png"></section>
-<section class="section"><img src="assets/section5.png"></section>
-<section class="section"><img src="assets/section6.png"></section>
+<section class="panel" style="background-image:url('assets/bg2.png')"></section>
 
-<section class="section gift">
-<div class="card">
+<section class="panel" style="background-image:url('assets/bg3.png')"></section>
+
+<section class="panel" style="background-image:url('assets/bg4.png')"></section>
+
+<section class="panel" style="background-image:url('assets/bg5.png')"></section>
+
+<section class="panel" style="background-image:url('assets/bg6.png')"></section>
+
+<section class="gift">
+<div class="giftCard">
 <h2>Amplop Digital</h2>
 <p>DANA</p>
-<b>082211864752</b>
+<b id="dana">082211864752</b>
+<br><br>
 <button onclick="copyDana()">Salin Nomor</button>
+<br><br>
 <p>Alamat Pengiriman Kado</p>
 <p>Dusun Timundu, Desa Kombo</p>
 </div>
@@ -37,10 +42,10 @@
 </div>
 
 <audio id="music" loop>
-  <!-- User should place Janji Suci mp3 here due to copyright -->
-  <source src="music/janji-suci.mp3" type="audio/mpeg">
+<source src="music/janji-suci.mp3" type="audio/mpeg">
 </audio>
 
 <script src="script.js"></script>
+
 </body>
 </html>
