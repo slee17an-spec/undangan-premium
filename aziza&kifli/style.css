@@ -2,21 +2,34 @@ body{
 margin:0;
 font-family:serif;
 color:#5a3c3c;
+background:#f5f1e8;
 overflow-x:hidden;
 }
 
+
+/* PAGE */
+
 .page{
+
+position:relative;
+
 height:100vh;
+
+background-size:contain;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
 display:flex;
 align-items:center;
 justify-content:center;
 
-background-size:contain;
-background-position:center;
-background-repeat:no-repeat;
-
-background-color:#f5f1e8;
 }
+
+
+
+/* BACKGROUND */
 
 .bg1{background-image:url("assets/bg1.png");}
 .bg2{background-image:url("assets/bg2.png");}
@@ -26,59 +39,204 @@ background-color:#f5f1e8;
 .bg6{background-image:url("assets/bg6.png");}
 .bg7{background-image:url("assets/bg7.png");}
 
-.overlay{
-background:rgba(255,255,255,0.7);
-}
 
-.center{
+
+/* COVER */
+
+.coverBox{
+
+position:absolute;
+
+bottom:140px;
+
+left:50%;
+
+transform:translateX(-50%);
+
 text-align:center;
-}
 
-h1{
-margin:10px 0;
-font-size:40px;
-}
-
-h2{
-margin:10px 0;
-}
-
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:#7b4a5a;
-color:white;
-border-radius:25px;
-text-decoration:none;
-}
-
-button{
-padding:10px 20px;
-background:#7b4a5a;
-color:white;
-border:none;
-border-radius:20px;
-cursor:pointer;
 }
 
 #openBtn{
-margin-top:20px;
+
 padding:14px 30px;
+
 font-size:18px;
+
+background:#7b4a5a;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
 }
 
+
+
+/* QUOTE */
+
+.quoteBox{
+
+max-width:420px;
+
+text-align:center;
+
+line-height:1.6;
+
+}
+
+
+
+/* COUPLE */
+
+.coupleBox{
+
+text-align:center;
+
+max-width:420px;
+
+}
+
+
+
+/* COUNTDOWN */
+
 #countdown{
+
 display:flex;
-gap:20px;
-justify-content:center;
+
+gap:15px;
+
+position:absolute;
+
+bottom:180px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.timeBox{
+
+background:white;
+
+padding:12px 16px;
+
+border-radius:10px;
+
+text-align:center;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
 }
 
 .timeBox span{
-font-size:30px;
+
+font-size:22px;
+
 font-weight:bold;
+
 }
 
-.quote{
-font-size:18px;
-line-height:1.6;
+
+
+/* RSVP */
+
+.rsvpBtn{
+
+position:absolute;
+
+bottom:110px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding:12px 24px;
+
+background:#7b4a5a;
+
+color:white;
+
+border-radius:25px;
+
+text-decoration:none;
+
+}
+
+
+
+/* AKAD */
+
+.akadBox{
+
+text-align:center;
+
+max-width:420px;
+
+}
+
+
+
+/* MAPS */
+
+.mapsBox{
+
+text-align:center;
+
+max-width:420px;
+
+}
+
+
+
+/* GIFT */
+
+.giftBox{
+
+text-align:center;
+
+max-width:420px;
+
+}
+
+button{
+
+padding:10px 20px;
+
+background:#7b4a5a;
+
+color:white;
+
+border:none;
+
+border-radius:20px;
+
+cursor:pointer;
+
+}
+
+
+
+/* BUTTON */
+
+.btn{
+
+display:inline-block;
+
+padding:12px 24px;
+
+background:#7b4a5a;
+
+color:white;
+
+border-radius:25px;
+
+text-decoration:none;
+
 }
