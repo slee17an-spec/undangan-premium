@@ -1,64 +1,68 @@
 body{
 margin:0;
 font-family:serif;
-overflow-x:hidden;
+color:#5a3c3c;
 }
 
-.cover, .panel{
-width:100%;
+.page{
 height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
 }
 
-.overlay{
-background:rgba(0,0,0,0.2);
-padding:20px;
-border-radius:20px;
-}
+.bg1{background-image:url("assets/bg1.png");}
+.bg2{background-image:url("assets/bg2.png");}
+.bg3{background-image:url("assets/bg3.png");}
+.bg4{background-image:url("assets/bg4.png");}
+.bg5{background-image:url("assets/bg5.png");}
+.bg6{background-image:url("assets/bg6.png");}
+.bg7{background-image:url("assets/bg7.png");}
 
-#openBtn{
-padding:14px 30px;
-font-size:18px;
-border:none;
-border-radius:40px;
-background:#7b4a5a;
-color:white;
-cursor:pointer;
-animation:pulse 2s infinite;
-}
-
-.gift{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#f5f1e8;
-}
-
-.giftCard{
-background:white;
+.content{
+background:rgba(255,255,255,0.6);
 padding:40px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
+border-radius:15px;
+max-width:500px;
 text-align:center;
 }
 
-button{
-cursor:pointer;
-padding:10px 20px;
-border:none;
-border-radius:30px;
-background:#7b4a5a;
-color:white;
+.center{
+text-align:center;
 }
 
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.05)}
-100%{transform:scale(1)}
+h1{
+font-size:40px;
+margin:10px 0;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#7b4a5a;
+color:white;
+border-radius:25px;
+text-decoration:none;
+}
+
+#countdown{
+display:flex;
+gap:20px;
+justify-content:center;
+}
+
+#countdown span{
+font-size:30px;
+font-weight:bold;
+}
+
+button{
+padding:10px 20px;
+background:#7b4a5a;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
 }
