@@ -3,7 +3,7 @@ margin:0;
 background:#e6e1d8;
 display:flex;
 justify-content:center;
-font-family:serif;
+font-family:'Cinzel',serif;
 color:#5a3a3a;
 }
 
@@ -43,11 +43,12 @@ width:100%;
 .monogram{
 font-size:60px;
 color:#7b4a5a;
-font-weight:bold;
+font-weight:700;
 }
 
 .couple{
 letter-spacing:2px;
+font-weight:600;
 }
 
 .gold{
@@ -83,32 +84,15 @@ border-radius:25px;
 text-decoration:none;
 }
 
-.nav{
-position:absolute;
-bottom:0;
-width:100%;
-background:#d7c6a6;
-display:flex;
-justify-content:space-around;
-padding:10px 0;
-font-size:12px;
-}
-
-.card{
-background:white;
-padding:15px;
-border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.15);
-}
-
-.rekeningNumber{
-font-size:20px;
-font-weight:bold;
-}
-
-.map{
-width:100%;
-border-radius:15px;
+#openBtn{
+margin-top:20px;
+padding:14px 32px;
+background:#7b4a5a;
+color:white;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
 }
 
 .nav{
@@ -132,27 +116,14 @@ font-size:18px;
 display:block;
 }
 
-.door{
-position:absolute;
-top:0;
-width:50%;
-height:100%;
-background:rgba(255,255,255,0.8);
-transition:1.2s;
+.card{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
-.doorLeft{
-left:0;
-}
-
-.doorRight{
-right:0;
-}
-
-.open .doorLeft{
-transform:translateX(-100%);
-}
-
-.open .doorRight{
-transform:translateX(100%);
+.rekeningNumber{
+font-size:20px;
+font-weight:bold;
 }
