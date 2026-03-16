@@ -39,21 +39,3 @@ navigator.clipboard.writeText("082211864752")
 alert("Nomor DANA berhasil disalin")
 
 }
-
-// ambil nama tamu dari url
-const params = new URLSearchParams(window.location.search)
-const guest = params.get("to")
-
-if(guest){
-document.querySelector(".guest").innerText = guest
-}
-
-function goSection(n){
-
-const sections = document.querySelectorAll(".page")
-
-sections[n].scrollIntoView({
-behavior:"smooth"
-})
-
-}
