@@ -1,496 +1,112 @@
 body{
 margin:0;
-font-family:'Poppins',sans-serif;
-background:
-radial-gradient(ellipse at bottom,#1b2735 0%,#090a0f 100%);
-color:#eee;
-text-align:center;
-overflow-x:hidden;
+background:#e6e1d8;
+display:flex;
+justify-content:center;
+font-family:serif;
+color:#5a3a3a;
 }
 
+.wrapper{
+width:100%;
+max-width:420px;
+background:white;
+box-shadow:0 0 25px rgba(0,0,0,0.25);
+}
 
-h1,h2,h3{
-font-family:'Playfair Display',serif;
+.page{
+height:100vh;
+background-size:cover;
+background-position:center;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.bg1{background-image:url("assets/bg1.png");}
+.bg2{background-image:url("assets/bg2.png");}
+.bg3{background-image:url("assets/bg3.png");}
+.bg4{background-image:url("assets/bg4.png");}
+.bg5{background-image:url("assets/bg5.png");}
+.bg6{background-image:url("assets/bg6.png");}
+.bg7{background-image:url("assets/bg7.png");}
+
+.coverContent{
+position:absolute;
+top:120px;
+width:100%;
+}
+
+.monogram{
+font-size:60px;
+color:#7b4a5a;
+font-weight:bold;
+}
+
+.couple{
 letter-spacing:2px;
 }
 
-/* COVER */
-
-#cover{
-
-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-background:
-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),
-url("assets/cover.jpg") center/cover;
-
-color:white;
+.gold{
+color:#7b4a5a;
 }
 
-#cover h1{
-font-size:60px;
-margin-bottom:10px;
-}
-
-#cover h2{
-font-weight:300;
-margin-bottom:40px;
-}
-
-/* BUTTON */
-
-button{
-padding:16px 40px;
-border:1px solid gold;
-background:transparent;
-color:gold;
-font-size:18px;
-border-radius:40px;
-cursor:pointer;
-transition:0.4s;
-}
-
-button:hover{
-background:gold;
-color:black;
-}
-
-/* SECTION */
-
-section{
-padding:120px 20px;
-max-width:1000px;
-margin:auto;
-}
-
-/* HERO */
-
-.hero img{
-
-width:260px;
-
-height:260px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:4px solid gold;
-
-margin-bottom:30px;
-
-}
-
-/* STORY */
-
-.story{
-background:#111;
-border-radius:20px;
-padding:60px;
-line-height:1.8;
-}
-
-/* EVENT */
-
-.event{
-background:#141414;
-border-radius:20px;
-border:1px solid #333;
-}
-
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-border-radius:10px;
-transition:0.5s;
-}
-
-.gallery img:hover{
-transform:scale(1.05);
-}
-
-/* RSVP */
-
-.rsvp a{
-display:inline-block;
-padding:16px 36px;
-background:gold;
-color:black;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-margin-top:20px;
-}
-
-/* FOOTER */
-
-footer{
-padding:40px;
-font-size:14px;
-color:#aaa;
-}
-.parallax{
-
-background-attachment:fixed;
-
-background-size:cover;
-
-background-position:center;
-
-}
-.flowers{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-overflow:hidden;
-z-index:999;
-}
-
-.flower{
-position:absolute;
-top:-50px;
-font-size:20px;
-animation:fall linear infinite;
-opacity:0.8;
-}
-
-@keyframes fall{
-
-0%{
-transform:translateY(-50px) rotate(0deg);
-}
-
-100%{
-transform:translateY(110vh) rotate(360deg);
-}
-
-}
 .countdown{
-
-background:#111;
-
-border-radius:20px;
-
-padding:60px;
-
-}
-
-#countdownBox{
-
 display:flex;
-
+gap:10px;
 justify-content:center;
-
-gap:30px;
-
-margin-top:30px;
-
-flex-wrap:wrap;
-
 }
 
-#countdownBox div{
-
-background:#000;
-
-border:1px solid gold;
-
-padding:20px;
-
-border-radius:10px;
-
-font-size:20px;
-
-min-width:80px;
-
-}
-
-#countdownBox span{
-
-display:block;
-
-font-size:30px;
-
-color:gold;
-
-font-weight:bold;
-
-}
-
-.timeline{
-background:#111;
-border-radius:20px;
-padding:80px 20px;
-}
-
-.timeline-container{
-position:relative;
-max-width:800px;
-margin:auto;
-}
-
-.timeline-container::before{
-content:'';
-position:absolute;
-left:50%;
-width:2px;
-height:100%;
-background:gold;
-}
-
-.timeline-item{
-position:relative;
-width:50%;
-padding:20px;
-box-sizing:border-box;
-}
-
-.timeline-item:nth-child(odd){
-left:0;
-text-align:right;
-}
-
-.timeline-item:nth-child(even){
-left:50%;
-}
-
-.timeline-item h3{
-color:gold;
-}
-
-.slider{
-position:relative;
-overflow:hidden;
-max-width:800px;
-margin:auto;
-}
-
-.slides{
-display:flex;
-transition:0.5s;
-}
-
-.slides img{
-width:100%;
-border-radius:10px;
-}
-
-.slider button{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:rgba(0,0,0,0.5);
-color:white;
-border:none;
-font-size:30px;
+.box{
+background:white;
 padding:10px;
-cursor:pointer;
-}
-
-#prev{left:10px;}
-#next{right:10px;}
-
-.guestbook{
-background:#111;
-border-radius:20px;
-padding:60px;
-}
-
-.guestbook input,
-.guestbook textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
-border-radius:5px;
-}
-
-#wishes{
-margin-top:20px;
-}
-
-#wishes div{
-background:#000;
-padding:15px;
-border:1px solid gold;
-margin-bottom:10px;
 border-radius:10px;
+width:70px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
-.stars, .stars2, .stars3{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-display:block;
-background:transparent;
-z-index:-1;
-
+.box span{
+font-size:22px;
+font-weight:bold;
 }
 
-.stars{
-
-background: url("https://www.transparenttextures.com/patterns/stardust.png");
-animation: moveStars 200s linear infinite;
-
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:12px 26px;
+background:#7b4a5a;
+color:white;
+border-radius:25px;
+text-decoration:none;
 }
 
-.stars2{
-
-background: url("https://www.transparenttextures.com/patterns/stardust.png");
-opacity:0.6;
-animation: moveStars 300s linear infinite;
-
-}
-
-.stars3{
-
-background: url("https://www.transparenttextures.com/patterns/stardust.png");
-opacity:0.3;
-animation: moveStars 400s linear infinite;
-
-}
-
-@keyframes moveStars{
-
-from{transform:translateY(0);}
-to{transform:translateY(-2000px);}
-
-}
-
-.flower{
-
+.nav{
 position:absolute;
-top:-50px;
-color:#FFD700;
-font-size:8px;
-animation:fall linear infinite;
-opacity:0.9;
-
-}
-
-.flower{
-
-color:#FFD700;
-text-shadow:0 0 5px gold;
-
-}
-
-/* ========================= */
-/* AURORA EFFECT */
-/* ========================= */
-
-.aurora{
-
-position:fixed;
-top:0;
-left:0;
+bottom:0;
 width:100%;
-height:100%;
-
-background:
-radial-gradient(circle at 20% 30%, rgba(0,255,200,0.15), transparent 40%),
-radial-gradient(circle at 80% 60%, rgba(255,0,255,0.15), transparent 40%),
-radial-gradient(circle at 50% 80%, rgba(0,150,255,0.15), transparent 40%);
-
-animation:auroraMove 25s infinite alternate;
-
-z-index:-2;
-
+background:#d7c6a6;
+display:flex;
+justify-content:space-around;
+padding:10px 0;
+font-size:12px;
 }
 
-@keyframes auroraMove{
-
-0%{
-transform:scale(1) rotate(0deg);
+.card{
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
-100%{
-transform:scale(1.2) rotate(8deg);
+.rekeningNumber{
+font-size:20px;
+font-weight:bold;
 }
 
+.map{
+width:100%;
+border-radius:15px;
 }
-
-
-/* ========================= */
-/* SHOOTING STAR */
-/* ========================= */
-
-.meteor{
-
-position:fixed;
-
-width:3px;
-height:120px;
-
-background:linear-gradient(white,transparent);
-
-top:-200px;
-left:-200px;
-
-transform:rotate(45deg);
-
-animation:meteorMove 10s linear infinite;
-
-z-index:-1;
-
-}
-
-@keyframes meteorMove{
-
-0%{
-top:-200px;
-left:-200px;
-opacity:1;
-}
-
-100%{
-top:120%;
-left:120%;
-opacity:0;
-}
-
-}
-
-
-/* ========================= */
-/* GOLD FLOWER FINAL */
-/* ========================= */
-
-.flower{
-
-position:absolute;
-top:-20px;
-
-color:#FFD700;
-
-font-size:7px;
-
-text-shadow:0 0 6px #FFD700;
-
-animation:fall linear infinite;
-
-opacity:0.9;
-
-}
-
