@@ -1,218 +1,41 @@
-fetch("config.json")
+const openBtn = document.getElementById("openBtn")
+const music = document.getElementById("music")
 
-.then(res => res.json())
+openBtn.addEventListener("click",()=>{
 
-.then(data => {
+music.play()
 
-document.getElementById("couple").innerHTML =
-data.groom + " & " + data.bride
-
-document.getElementById("heroCouple").innerHTML =
-data.groom + " & " + data.bride
-
-document.getElementById("story").innerHTML =
-data.story
-
-document.getElementById("date").innerHTML =
-data.date + " | " + data.time
-
-document.getElementById("venue").innerHTML =
-data.venue
-
-document.getElementById("maps").href =
-data.maps
-
-document.getElementById("wa").href =
-"https://wa.me/" + data.whatsapp
-
-document.getElementById("music").src =
-data.music
-
-
-const gallery = document.getElementById("gallery")
-
-data.gallery.forEach(img => {
-
-gallery.innerHTML +=
-"<img src='"+img+"'>"
-
+window.scrollTo({
+top:window.innerHeight,
+behavior:"smooth"
 })
 
 })
 
 
-const params = new URLSearchParams(window.location.search)
-
-document.getElementById("guest").innerHTML =
-params.get("to") || "Tamu Undangan"
-
-
-function openInvite(){
-
-document.getElementById("cover").style.display="none"
-
-document.getElementById("music").play()
-
-}
-window.addEventListener("scroll",()=>{
-
-document.querySelectorAll("section").forEach(sec=>{
-
-const pos = sec.getBoundingClientRect().top
-const screen = window.innerHeight
-
-if(pos < screen - 100){
-sec.style.opacity = 1
-sec.style.transform = "translateY(0)"
-}
-
-})
-
-})
-
-const flowerContainer = document.querySelector(".flowers")
-
-function createFlower(){
-
-const flower = document.createElement("div")
-
-flower.classList.add("flower")
-
-flower.innerHTML="❀"
-
-flower.style.left=Math.random()*100+"vw"
-
-flower.style.animationDuration=5+Math.random()*5+"s"
-
-flower.style.fontSize=6+Math.random()*8+"px"
-
-flowerContainer.appendChild(flower)
-
-setTimeout(()=>{
-
-flower.remove()
-
-},10000)
-
-}
-
-setInterval(createFlower,500)
-
-const weddingDate = new Date("July 12, 2026 09:00:00").getTime()
+const weddingDate = new Date("2026-03-30T19:00:00")
 
 setInterval(()=>{
 
-const now = new Date().getTime()
+const now = new Date()
+const diff = weddingDate - now
 
-const distance = weddingDate - now
+const days = Math.floor(diff/(1000*60*60*24))
+const hours = Math.floor((diff/(1000*60*60))%24)
+const minutes = Math.floor((diff/1000/60)%60)
+const seconds = Math.floor((diff/1000)%60)
 
-const days = Math.floor(distance/(1000*60*60*24))
-
-const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60))
-
-const minutes = Math.floor((distance%(1000*60*60))/(1000*60))
-
-const seconds = Math.floor((distance%(1000*60))/1000)
-
-document.getElementById("days").innerHTML = days
-
-document.getElementById("hours").innerHTML = hours
-
-document.getElementById("minutes").innerHTML = minutes
-
-document.getElementById("seconds").innerHTML = seconds
+document.getElementById("days").innerText = days
+document.getElementById("hours").innerText = hours
+document.getElementById("minutes").innerText = minutes
+document.getElementById("seconds").innerText = seconds
 
 },1000)
 
-let index=0
 
-const slides=document.getElementById("gallery")
+function copyDana(){
 
-document.getElementById("next").onclick=()=>{
-
-index++
-
-slides.style.transform="translateX(-"+index*100+"%)"
+navigator.clipboard.writeText("082211864752")
+alert("Nomor DANA berhasil disalin")
 
 }
-
-document.getElementById("prev").onclick=()=>{
-
-index--
-
-if(index<0)index=0
-
-slides.style.transform="translateX(-"+index*100+"%)"
-
-}
-
-function sendWish(){
-
-const name=document.getElementById("guestName").value
-
-const msg=document.getElementById("guestMessage").value
-
-const box=document.getElementById("wishes")
-
-const item=document.createElement("div")
-
-item.innerHTML="<b>"+name+"</b><br>"+msg
-
-box.prepend(item)
-
-}
-
-/* ========================= */
-/* CINEMATIC OPENING */
-/* ========================= */
-
-window.onload = () => {
-
-const couple = document.getElementById("couple")
-
-couple.style.opacity = 0
-couple.style.transform = "translateY(40px)"
-
-setTimeout(()=>{
-
-couple.style.transition = "1.5s"
-couple.style.opacity = 1
-couple.style.transform = "translateY(0)"
-
-},500)
-
-}
-
-
-/* ========================= */
-/* GOLD FLOWER GENERATOR */
-/* ========================= */
-
-const flowerContainer = document.querySelector(".flowers")
-
-function createFlower(){
-
-const flower = document.createElement("div")
-
-flower.classList.add("flower")
-
-flower.innerHTML = "✦"
-
-flower.style.left = Math.random()*100 + "vw"
-
-flower.style.animationDuration = 5 + Math.random()*5 + "s"
-
-flower.style.fontSize = 5 + Math.random()*5 + "px"
-
-flowerContainer.appendChild(flower)
-
-setTimeout(()=>{
-
-flower.remove()
-
-},10000)
-
-}
-
-setInterval(createFlower,500)
-
