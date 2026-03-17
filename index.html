@@ -6,158 +6,366 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Undangan Pernikahan</title>
+<title>Undangan Aziza & Kifli</title>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="stars"></div>
-<div class="stars2"></div>
-<div class="stars3"></div>
+<div class="wrapper">
 
-<div class="aurora"></div>
-<div class="meteor"></div>
 
-<div class="flowers"></div>
+<!-- ================= COVER ================= -->
 
-<div id="cover">
+<section class="page bg1">
 
-<h1 id="couple"></h1>
+<div class="coverContent">
+
+<p class="date">
+Senin<br>
+30 Maret
+</p>
+
+<h1 class="monogram">
+AK
+</h1>
+
+<h2 class="couple">
+AZIZA & KIFLI
+</h2>
+
+<p class="save">
+SAVE THE DATE
+</p>
+
+<br>
 
 <p>Kepada Yth</p>
+<p>Bapak/Ibu/Saudara/i</p>
 
-<h2 id="guest"></h2>
+<p class="guest">
+Nama Tamu
+</p>
 
-<button onclick="openInvite()">Buka Undangan</button>
+<button id="openBtn">
+Open Invitation
+</button>
 
 </div>
 
-
-<section class="hero">
-
-<img src="assets/couple.jpg">
-
-<h2 id="heroCouple"></h2>
-
-</section>
-
-
-<section class="story">
-
-<h2>Cerita Kami</h2>
-
-<p id="story"></p>
-
-</section>
-
-  <section class="timeline">
-
-<h2>Perjalanan Cinta Kami</h2>
-
-<div class="timeline-container">
-
-<div class="timeline-item">
-<h3>2019</h3>
-<p>Pertama kali bertemu.</p>
-</div>
-
-<div class="timeline-item">
-<h3>2022</h3>
-<p>Memutuskan melangkah bersama.</p>
-</div>
-
-<div class="timeline-item">
-<h3>2026</h3>
-<p>Menuju hari bahagia.</p>
-</div>
-
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
 </div>
 
 </section>
 
 
-<section class="event">
 
-<h2>Hari Bahagia</h2>
+<!-- ================= QUOTES ================= -->
 
-<p id="date"></p>
+<section class="page bg2">
 
-<p id="venue"></p>
+<div class="content">
 
-<a id="maps" target="_blank">Lihat Lokasi</a>
+<div class="monogramSmall">AK</div>
 
-</section>
+<p class="quote">
 
-<section class="countdown">
+Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+untukmu pasangan hidup dari jenismu sendiri,
+supaya kamu cenderung dan merasa tenteram kepadanya,
+dan dijadikan-Nya di antaramu rasa kasih dan sayang.
 
-<h2>Menuju Hari Bahagia</h2>
+Sesungguhnya pada yang demikian itu benar-benar terdapat
+tanda-tanda bagi kaum yang berfikir.
 
-<div id="countdownBox">
+</p>
 
-<div><span id="days"></span>Hari</div>
+<p class="ayat">(Ar-Rum : 21)</p>
 
-<div><span id="hours"></span>Jam</div>
+</div>
 
-<div><span id="minutes"></span>Menit</div>
-
-<div><span id="seconds"></span>Detik</div>
-
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
 </div>
 
 </section>
 
-<section class="gallery">
 
-<h2>Galeri</h2>
 
-<div class="slider">
+<!-- ================= COUPLE ================= -->
 
-<button id="prev">‹</button>
+<section class="page bg3">
 
-<div class="slides" id="gallery"></div>
+<div class="content">
 
-<button id="next">›</button>
+<p class="bismillah">
+Bismillahirrahmanirrahim
+</p>
 
+<p class="intro">
+
+Dengan memohon Rahmat dan Ridho Allah SWT
+kami mengundang Bapak/ Ibu/ saudara/i 
+untuk menghadiri resepsi pernikahan kami
+
+</p>
+
+
+<h2 class="gold">
+Wafiah Aziza
+</h2>
+
+<p>Putri pertama dari</p>
+
+<p>Bapak Takdir & Ibu Hj. Sarini</p>
+
+
+<p class="dengan">
+DENGAN
+</p>
+
+
+<h2 class="gold">
+Sulkifli
+</h2>
+
+<p>Putra pertama dari</p>
+
+<p>Bapak Basri & Ibu Suryani</p>
+
+
+</div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
 </div>
 
 </section>
 
-<section class="guestbook">
 
-<h2>Ucapan & Doa</h2>
 
-<input id="guestName" placeholder="Nama Anda">
+<!-- ================= COUNTDOWN ================= -->
 
-<textarea id="guestMessage" placeholder="Tulis ucapan"></textarea>
+<section class="page bg4">
 
-<button onclick="sendWish()">Kirim Ucapan</button>
+<div class="content">
 
-<div id="wishes"></div>
+<div class="countdown">
+
+<div class="box">
+<span id="days">0</span>
+<p>Hari</p>
+</div>
+
+<div class="box">
+<span id="hours">0</span>
+<p>Jam</p>
+</div>
+
+<div class="box">
+<span id="minutes">0</span>
+<p>Menit</p>
+</div>
+
+<div class="box">
+<span id="seconds">0</span>
+<p>Detik</p>
+</div>
+
+</div>
+
+<p class="info">
+
+Kirim ucapan untuk mempelai
+dan konfirmasi kehadiran
+
+</p>
+
+<a class="btn"
+href="https://wa.me/6282211864752">
+
+Kirim Ucapan RSVP
+
+</a>
+
+</div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
 
 </section>
 
 
-<section class="rsvp">
 
-<h2>Konfirmasi Kehadiran</h2>
+<!-- ================= AKAD ================= -->
 
-<a id="wa">Kirim WhatsApp</a>
+<section class="page bg5">
+
+<div class="content">
+
+<h1 class="title">
+AKAD NIKAH
+</h1>
+
+<p class="dateBig">
+Senin, 30 Maret 2026
+</p>
+
+<p>
+Pukul 19.00 WITA
+</p>
+
+<br>
+
+<p class="locTitle">
+LOKASI ACARA
+</p>
+
+<p>
+Dusun Timundu<br>
+Desa Kombo
+</p>
+
+<br>
+
+<a class="btn"
+href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
+
+Link Google Maps
+
+</a>
+
+</div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
 
 </section>
 
 
-<audio id="music" autoplay loop>
-<source src="assets/music.mp3">
+
+<!-- ================= MAPS ================= -->
+
+<section class="page bg6">
+
+<div class="content">
+
+<h1>Maps</h1>
+
+<img class="map"
+src="https://maps.googleapis.com/maps/api/staticmap?center=Kombo,Tolitoli&zoom=15&size=400x300">
+
+<br>
+
+<a class="btn"
+href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
+
+Buka Google Maps
+
+</a>
+
+</div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
+
+</section>
+
+
+
+<!-- ================= GIFT ================= -->
+
+<section class="page bg7">
+
+<div class="content">
+
+<h1>Amplop Digital</h1>
+
+<p>DANA</p>
+
+<h2>082211864752</h2>
+
+<button onclick="copyDana()">
+Salin Nomor
+</button>
+
+<br><br>
+
+<div class="rekening">
+
+<h3>Transfer Bank</h3>
+
+<div class="card">
+
+<p>Bank BRI</p>
+
+<p>Nomor Rekening</p>
+
+<p class="rekeningNumber">
+XXXX XXXX XXXX
+</p>
+
+<p>a.n Aziza / Kifli</p>
+
+</div>
+
+</div>
+
+<br>
+
+<p>
+Alamat Pengiriman Kado
+</p>
+
+<p>
+Dusun Timundu<br>
+Desa Kombo
+</p>
+
+</div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
+
+</section>
+
+
+</div>
+
+
+<audio id="music" loop>
+<source src="assets/music/janji-suci.mp3">
 </audio>
-
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
