@@ -39,3 +39,30 @@ navigator.clipboard.writeText("082211864752")
 alert("Nomor DANA berhasil disalin")
 
 }
+
+<script>
+  const music = document.getElementById("bg-music");
+  const btn = document.getElementById("music-btn");
+
+  let isPlaying = false;
+
+  // autoplay setelah user klik layar (WAJIB di HP)
+  document.body.addEventListener("click", function () {
+    if (!isPlaying) {
+      music.play();
+      isPlaying = true;
+    }
+  });
+
+  // tombol control
+  btn.addEventListener("click", function () {
+    if (music.paused) {
+      music.play();
+      btn.innerHTML = "🔊";
+    } else {
+      music.pause();
+      btn.innerHTML = "🔇";
+    }
+  });
+</script>
+
