@@ -129,3 +129,27 @@ padding:10px;
 border-radius:16px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
+
+.logo-ak {
+  width: 100%;
+  max-width: 300px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.logo-ak svg {
+  width: 100%;
+  height: auto;
+}
+
+/* efek elegan */
+.logo-ak svg text {
+  letter-spacing: 2px;
+}
+
+/* optional glow halus */
+.logo-ak svg:hover {
+  filter: drop-shadow(0 5px 15px rgba(122, 46, 46, 0.3));
+  transform: scale(1.03);
+  transition: 0.3s;
+}
