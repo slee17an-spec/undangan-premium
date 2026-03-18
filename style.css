@@ -107,9 +107,20 @@ font-size:20px;
 font-weight:bold;
 }
 
-.map{
-width:100%;
-border-radius:15px;
+.maps-image {
+  width: 100%;
+  max-width: 400px;   /* batas maksimal biar tidak kebesaran */
+  height: auto;
+  display: block;
+  margin: 15px auto;  /* center */
+  border-radius: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.maps-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .spotifyWrapper{
