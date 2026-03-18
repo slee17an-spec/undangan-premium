@@ -1,168 +1,387 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aziza & Kifli Wedding</title>
+<title>Undangan Aziza & Kifli</title>
 
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-
-<meta property="og:title" content="Aziza & Kifli Wedding">
-<meta property="og:description" content="Undangan Pernikahan Aziza & Kifli">
-<meta property="og:image" content="assets/bg1.png">
 
 </head>
 
 <body>
 
-<!-- MUSIC -->
-<audio id="music" loop preload="auto">
-<source src="assets/music/janji-suci.mp3" type="audio/mp3">
-</audio>
+<div class="wrapper">
 
-<div class="musicBtn" onclick="toggleMusic()">🎵</div>
 
-<!-- COVER -->
-<section class="page bg1 cover">
+<!-- ================= COVER ================= -->
 
-<div class="door leftDoor"></div>
-<div class="door rightDoor"></div>
+<section class="page bg1">
 
-<div class="content">
+<div class="coverContent">
 
-<p>Senin<br>30 Maret 2026</p>
+<p class="date">
+Senin<br>
+30 Maret 2026
+</p>
 
-<h1 class="monogram">A & K</h1>
-<h2>AZIZA & KIFLI</h2>
+<h1 class="monogram">
+AK
+</h1>
 
-<p>SAVE THE DATE</p>
+<h2 class="couple">
+AZIZA & KIFLI
+</h2>
+
+<p class="save">
+SAVE THE DATE
+</p>
+
+<br>
 
 <p>Kepada Yth</p>
 <p>Bapak/Ibu/Saudara/i</p>
 
-<p class="guestName">Tamu Undangan</p>
-
-<button class="btn" onclick="openInvitation()">Open Invitation</button>
-
-</div>
-</section>
-
-<!-- QUOTES -->
-<section class="page bg2">
-<div class="content">
-
-<p>
-Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
-untukmu pasangan hidup...
+<p class="guest">
+Nama Tamu
 </p>
 
-<p>(QS Ar-Rum : 21)</p>
+<button id="openBtn">
+Open Invitation
+</button>
 
 </div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
+
 </section>
 
-<!-- COUPLE -->
-<section class="page bg3">
+
+
+<!-- ================= QUOTES ================= -->
+
+<section class="page bg2">
+
 <div class="content">
 
-<h2>Wafiah Aziza</h2>
-<p>Putri pertama</p>
+<div class="monogramBig">AK</div>
 
-<br>
+<p class="quote">
 
-<h2>&</h2>
+Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+untukmu pasangan hidup dari jenismu sendiri,
+supaya kamu cenderung dan merasa tenteram kepadanya,
+dan dijadikan-Nya di antaramu rasa kasih dan sayang.
 
-<br>
+Sesungguhnya pada yang demikian itu benar-benar terdapat
+tanda-tanda bagi kaum yang berfikir.
 
-<h2>Sulkifli</h2>
-<p>Putra pertama</p>
+</p>
+
+<p class="ayat">(Ar-Rum : 21)</p>
 
 </div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
+
 </section>
 
-<!-- COUNTDOWN -->
+
+
+<!-- ================= COUPLE ================= -->
+
+<section class="page bg3">
+
+<div class="content">
+
+<p class="bismillah">
+Bismillahirrahmanirrahim
+</p>
+
+<p class="intro">
+
+Dengan memohon Rahmat dan Ridho Allah SWT
+kami mengundang Bapak/ Ibu/ saudara/i 
+untuk menghadiri resepsi pernikahan kami
+
+</p>
+
+
+<h2 class="gold">
+Wafiah Aziza
+</h2>
+
+<p>Putri pertama dari</p>
+
+<p>Bapak Takdir & Ibu Hj. Sarini</p>
+
+
+<p class="dengan">
+DENGAN
+</p>
+
+
+<h2 class="gold">
+Sulkifli
+</h2>
+
+<p>Putra pertama dari</p>
+
+<p>Bapak Basri & Ibu Suryani</p>
+
+
+</div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
+
+</section>
+
+
+
+<!-- ================= COUNTDOWN ================= -->
+
 <section class="page bg4">
+
 <div class="content">
 
 <div class="countdown">
-<div class="box"><span id="hari"></span><p>Hari</p></div>
-<div class="box"><span id="jam"></span><p>Jam</p></div>
-<div class="box"><span id="menit"></span><p>Menit</p></div>
-<div class="box"><span id="detik"></span><p>Detik</p></div>
+
+<div class="box">
+<span id="days">0</span>
+<p>Hari</p>
 </div>
 
-<button class="btn" onclick="sendRSVP()">Kirim RSVP</button>
+<div class="box">
+<span id="hours">0</span>
+<p>Jam</p>
+</div>
+
+<div class="box">
+<span id="minutes">0</span>
+<p>Menit</p>
+</div>
+
+<div class="box">
+<span id="seconds">0</span>
+<p>Detik</p>
+</div>
 
 </div>
-</section>
 
-<!-- AKAD -->
-<section class="page bg5">
-<div class="content">
+<p class="info">
 
-<h2>Akad Nikah</h2>
-<p>30 Maret 2026 - 19.00 WITA</p>
+Kirim ucapan untuk mempelai
+dan konfirmasi kehadiran
 
-<a href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA" target="_blank" class="btn">
-Buka Maps
+</p>
+
+<a class="btn"
+href="https://wa.me/6282211864752">
+
+Kirim Ucapan RSVP
+
 </a>
 
 </div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
+
 </section>
 
-<!-- SPOTIFY -->
+
+
+<!-- ================= AKAD ================= -->
+
+<section class="page bg5">
+
+<div class="content">
+
+<h1 class="title">
+AKAD NIKAH
+</h1>
+
+<p class="dateBig">
+Senin, 30 Maret 2026
+</p>
+
+<p>
+Pukul 19.00 WITA
+</p>
+
+<br>
+
+<p class="locTitle">
+LOKASI ACARA
+</p>
+
+<p>
+Dusun Timundu<br>
+Desa Kombo
+</p>
+
+<br>
+
+<a class="btn"
+href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
+
+Link Google Maps
+
+</a>
+
+</div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
+
+</section>
+
+
+
+<!-- ================= MAPS ================= -->
+
 <section class="page bg6">
+
+<div class="content">
+
+<h1>Maps</h1>
+
+<img class="map"
+src="https://maps.googleapis.com/maps/api/staticmap?center=Kombo,Tolitoli&zoom=15&size=400x300">
+
+<br>
+
+<a class="btn"
+href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
+
+Buka Google Maps
+
+</a>
+
+</div>
+<section class="page bg7">
+
 <div class="content">
 
 <h2>Lagu Pernikahan Kami</h2>
-<p>Putar lagu spesial kami</p>
+<p style="margin-bottom:15px;">Putar lagu spesial kami</p>
 
-<div class="spotifyCard">
+<div class="spotifyWrapper">
 
-<div class="spotifyEmbed">
 <iframe 
 src="https://open.spotify.com/embed/track/3diRmt2Z6xSEaT0mqBr681"
-loading="lazy"
-allow="autoplay; encrypted-media">
+width="100%" 
+height="152" 
+frameborder="0" 
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+loading="lazy">
 </iframe>
-</div>
-
-<a href="https://open.spotify.com/track/3diRmt2Z6xSEaT0mqBr681" target="_blank" class="spotifyBtn">
-Buka di Spotify
-</a>
 
 </div>
 
 </div>
+
+</section>
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
+
 </section>
 
-<!-- PROMOSI -->
-<section class="page bg7" id="promo">
+
+
+<!-- ================= GIFT ================= -->
+
+<section class="page bg7">
+
 <div class="content">
 
-<h2>Tertarik Website Seperti Ini?</h2>
+<h1>Amplop Digital</h1>
 
-<p>Kami menyediakan jasa:</p>
+<p>DANA</p>
 
-<ul class="promoList">
-<li>Undangan Digital Premium</li>
-<li>Website UMKM</li>
-<li>Landing Page Produk</li>
-<li>Toko Online</li>
-</ul>
+<h2>082211864752</h2>
 
-<p class="promoTag">Fast • Modern • Mobile Friendly</p>
+<button onclick="copyDana()">
+Salin Nomor
+</button>
 
-<a href="https://wa.me/6282211864752" target="_blank" class="btn">
-Konsultasi Sekarang
-</a>
+<br><br>
+
+<div class="rekening">
+
+<h3>Transfer Bank</h3>
+
+<div class="card">
+
+<p>Bank BRI</p>
+
+<p>Nomor Rekening</p>
+
+<p class="rekeningNumber">
+XXXX XXXX XXXX
+</p>
+
+<p>a.n Aziza / Kifli</p>
 
 </div>
+
+</div>
+
+<br>
+
+<p>
+Alamat Pengiriman Kado
+</p>
+
+<p>
+Dusun Timundu<br>
+Desa Kombo
+</p>
+
+</div>
+
+<div class="nav">
+<div>Couple</div>
+<div>Quotes</div>
+<div>Memories</div>
+<div>Akad</div>
+</div>
+
 </section>
+
+
+</div>
+
 
 <script src="script.js"></script>
 
