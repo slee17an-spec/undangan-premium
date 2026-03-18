@@ -123,3 +123,17 @@ font-weight:bold;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+.logo-ak {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
