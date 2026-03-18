@@ -124,21 +124,6 @@ font-weight:bold;
 }
 
 .logo-ak {
-  animation: fadeUp 1s ease;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.logo-ak {
   text-align: center;
 }
 
