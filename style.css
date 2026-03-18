@@ -137,3 +137,15 @@ font-weight:bold;
     transform: translateY(0);
   }
 }
+
+.logo-ak {
+  text-align: center;
+}
+
+.logo-ak img {
+  width: 100%;
+  max-width: 180px; /* kontrol ukuran */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
