@@ -328,6 +328,15 @@ Desa Kombo Kecamatan Dampal Selatan Kab. Tolitoli
 <button id="music-btn">🔊</button>
 
 <script src="script.js"></script>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const nama = urlParams.get("to");
 
+  if (nama) {
+    document.getElementById("nama-tamu").innerText = 
+      "Kepada Bapak/Ibu " + decodeURIComponent(nama);
+  }
+</script>
+  
 </body>
 </html>
