@@ -71,38 +71,3 @@ function copyDana() {
   navigator.clipboard.writeText("082211864752")
   alert("Nomor DANA berhasil disalin")
 }
-
-
-// ================= NAMA TAMU =================
-const urlParams = new URLSearchParams(window.location.search)
-let nama = urlParams.get("to")
-
-if (nama) {
-
-  nama = decodeURIComponent(nama).trim()
-
-  let sapaan = "Saudara/i"
-  const namaLower = nama.toLowerCase()
-
-  // deteksi & hapus sapaan
-  if (namaLower.startsWith("saudara ")) {
-    sapaan = "Saudara"
-    nama = nama.replace(/^saudara\s+/i, "")
-  } else if (namaLower.startsWith("saudari ")) {
-    sapaan = "Saudari"
-    nama = nama.replace(/^saudari\s+/i, "")
-  }
-
-  // rapikan koma
-  nama = nama.replace(/,/g, ", ")
-  nama = nama.replace(/\s+/g, " ").trim()
-
-  // kapitalisasi
-  nama = nama.split(" ").map(kata => {
-    return kata.charAt(0).toUpperCase() + kata.slice(1)
-  }).join(" ")
-
-  // tampilkan
-  document.getElementById("nama-tamu").innerText =
-    sapaan + " " + nama
-}
