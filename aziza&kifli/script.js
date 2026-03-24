@@ -48,7 +48,6 @@ const interval = setInterval(() => {
 // ================= MUSIC CONTROL =================
 let isPlaying = false
 
-// autoplay setelah klik (biar tidak diblok HP)
 document.body.addEventListener("click", function () {
   if (!isPlaying) {
     music.play()
@@ -56,7 +55,6 @@ document.body.addEventListener("click", function () {
   }
 })
 
-// tombol play / pause
 btnMusic.addEventListener("click", function () {
   if (music.paused) {
     music.play()
@@ -75,28 +73,28 @@ function copyDana() {
 }
 
 
-// ================= NAMA TAMU (FIX TANPA DOBEL) =================
+// ================= NAMA TAMU (VERSI REKAN) =================
 const urlParams = new URLSearchParams(window.location.search)
 let nama = urlParams.get("to")
 
 if (nama) {
 
   nama = decodeURIComponent(nama).trim()
-  let sapaan = "Bapak/Ibu"
 
-  const namaLower = nama.toLowerCase()
+  // hapus sapaan jika ada (biar tidak aneh)
+  nama = nama.replace(/^bapak\s+/i, "")
+  nama = nama.replace(/^ibu\s+/i, "")
 
-  if (namaLower.startsWith("bapak ")) {
-    sapaan = "Bapak"
-    nama = nama.replace(/bapak\s+/i, "")
-  } else if (namaLower.startsWith("ibu ")) {
-    sapaan = "Ibu"
-    nama = nama.replace(/ibu\s+/i, "")
-  }
+  // rapikan koma
+  nama = nama.replace(/,/g, ", ")
+  nama = nama.replace(/\s+/g, " ").trim()
 
-  // kapitalisasi tiap kata
-  nama = nama.replace(/\b\w/g, c => c.toUpperCase())
+  // kapitalisasi aman per kata
+  nama = nama.split(" ").map(kata => {
+    return kata.charAt(0).toUpperCase() + kata.slice(1)
+  }).join(" ")
 
+  // tampilkan TANPA sapaan formal
   document.getElementById("nama-tamu").innerText =
-  nama
+    "Saudara " + nama
 }
