@@ -73,7 +73,7 @@ function copyDana() {
 }
 
 
-// ================= NAMA TAMU (VERSI REKAN) =================
+// ================= NAMA TAMU =================
 const urlParams = new URLSearchParams(window.location.search)
 let nama = urlParams.get("to")
 
@@ -81,20 +81,28 @@ if (nama) {
 
   nama = decodeURIComponent(nama).trim()
 
-  // hapus sapaan jika ada (biar tidak aneh)
-  nama = nama.replace(/^bapak\s+/i, "")
-  nama = nama.replace(/^ibu\s+/i, "")
+  let sapaan = "Saudara/i"
+  const namaLower = nama.toLowerCase()
+
+  // deteksi & hapus sapaan
+  if (namaLower.startsWith("saudara ")) {
+    sapaan = "Saudara"
+    nama = nama.replace(/^saudara\s+/i, "")
+  } else if (namaLower.startsWith("saudari ")) {
+    sapaan = "Saudari"
+    nama = nama.replace(/^saudari\s+/i, "")
+  }
 
   // rapikan koma
   nama = nama.replace(/,/g, ", ")
   nama = nama.replace(/\s+/g, " ").trim()
 
-  // kapitalisasi aman per kata
+  // kapitalisasi
   nama = nama.split(" ").map(kata => {
     return kata.charAt(0).toUpperCase() + kata.slice(1)
   }).join(" ")
 
-  // tampilkan TANPA sapaan formal
+  // tampilkan
   document.getElementById("nama-tamu").innerText =
-    "Saudara " + nama
+    sapaan + " " + nama
 }
