@@ -73,3 +73,30 @@ function copyDana() {
   navigator.clipboard.writeText("082211864752")
   alert("Nomor DANA berhasil disalin")
 }
+
+
+// ================= NAMA TAMU (FIX TANPA DOBEL) =================
+const urlParams = new URLSearchParams(window.location.search)
+let nama = urlParams.get("to")
+
+if (nama) {
+
+  nama = decodeURIComponent(nama).trim()
+  let sapaan = "Bapak/Ibu"
+
+  const namaLower = nama.toLowerCase()
+
+  if (namaLower.startsWith("bapak ")) {
+    sapaan = "Bapak"
+    nama = nama.replace(/bapak\s+/i, "")
+  } else if (namaLower.startsWith("ibu ")) {
+    sapaan = "Ibu"
+    nama = nama.replace(/ibu\s+/i, "")
+  }
+
+  // kapitalisasi tiap kata
+  nama = nama.replace(/\b\w/g, c => c.toUpperCase())
+
+  document.getElementById("nama-tamu").innerText =
+    sapaan + " " + nama
+}
