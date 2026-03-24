@@ -353,6 +353,9 @@ if (nama) {
   document.getElementById("nama-tamu").innerText =
     sapaan + " " + nama
 }
+  // rapikan spasi setelah koma
+nama = nama.replace(/,/g, ", ")
+nama = nama.replace(/\s+/g, " ").trim()
 </script>
   
 </body>
