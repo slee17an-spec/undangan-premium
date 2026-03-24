@@ -25,11 +25,11 @@
 
 <p class="date">
 Senin<br>
-30 Maret
+30 Maret 2026
 </p>
 
 <h1 class="monogram">
-AK
+.
 </h1>
 
 <h2 class="couple">
@@ -43,23 +43,12 @@ SAVE THE DATE
 <br>
 
 <p>Kepada Yth</p>
-<p>Bapak/Ibu/Saudara/i</p>
+<h3 id="nama-tamu">Tamu Undangan</h3>
 
-<p class="guest">
-Nama Tamu
-</p>
-
-<button id="openBtn">
+<button id="btn">
 Open Invitation
 </button>
 
-</div>
-
-<div class="nav">
-<div>Couple</div>
-<div>Quotes</div>
-<div>Memories</div>
-<div>Akad</div>
 </div>
 
 </section>
@@ -71,8 +60,6 @@ Open Invitation
 <section class="page bg2">
 
 <div class="content">
-
-<div class="monogramSmall">AK</div>
 
 <p class="quote">
 
@@ -239,17 +226,8 @@ LOKASI ACARA
 
 <p>
 Dusun Timundu<br>
-Desa Kombo
+Desa Kombo Kecamatan Dampal Selatan Kab. Tolitoli
 </p>
-
-<br>
-
-<a class="btn"
-href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
-
-Link Google Maps
-
-</a>
 
 </div>
 
@@ -268,35 +246,16 @@ Link Google Maps
 
 <section class="page bg6">
 
-<div class="content">
+<div class="music-section">
+  <h2>Lokasi Pernikahan</h2>
+  <p>Klik peta untuk membuka lokasi</p>
 
-<h1>Maps</h1>
-
-<img class="map"
-src="https://maps.googleapis.com/maps/api/staticmap?center=Kombo,Tolitoli&zoom=15&size=400x300">
-
-<br>
-
-<a class="btn"
-href="https://maps.app.goo.gl/t94SwqpPxCWW8TAYA">
-
-Buka Google Maps
-
-</a>
-
+  <a href="https://maps.app.goo.gl/UV35SypH6UJKqjrE8" target="_blank">
+    <img src="assets/maps-preview.jpg" alt="Lokasi Maps" class="maps-image">
+  </a>
 </div>
-
-<div class="nav">
-<div>Couple</div>
-<div>Quotes</div>
-<div>Memories</div>
-<div>Akad</div>
-</div>
-
 </section>
-
-
-
+  
 <!-- ================= GIFT ================= -->
 
 <section class="page bg7">
@@ -326,10 +285,10 @@ Salin Nomor
 <p>Nomor Rekening</p>
 
 <p class="rekeningNumber">
-XXXX XXXX XXXX
+5226 01 037954 53 6
 </p>
 
-<p>a.n Aziza / Kifli</p>
+<p>a.n Wafiah Aziza</p>
 
 </div>
 
@@ -343,7 +302,7 @@ Alamat Pengiriman Kado
 
 <p>
 Dusun Timundu<br>
-Desa Kombo
+Desa Kombo Kecamatan Dampal Selatan Kab. Tolitoli
 </p>
 
 </div>
@@ -359,13 +318,48 @@ Desa Kombo
 
 
 </div>
-
-
-<audio id="music" loop>
-<source src="assets/music/janji-suci.mp3">
+  
+<audio id="bg-music" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
 </audio>
 
-<script src="script.js"></script>
+<button id="music-btn">🔊</button>
 
+<script src="script.js"></script>
+<script>
+const urlParams = new URLSearchParams(window.location.search)
+let nama = urlParams.get("to")
+
+if (nama) {
+
+  nama = decodeURIComponent(nama).trim()
+  let sapaan = "Bapak/Ibu"
+
+  const namaLower = nama.toLowerCase()
+
+  if (namaLower.startsWith("bapak ")) {
+    sapaan = "Bapak"
+    nama = nama.replace(/^bapak\s+/i, "")
+  } else if (namaLower.startsWith("ibu ")) {
+    sapaan = "Ibu"
+    nama = nama.replace(/^ibu\s+/i, "")
+  }
+
+  // kapitalisasi tiap kata TANPA merusak gelar
+  nama = nama.split(" ").map(kata => {
+    return kata.charAt(0).toUpperCase() + kata.slice(1)
+  }).join(" ")
+
+  document.getElementById("nama-tamu").innerText =
+    sapaan + " " + nama
+}
+  // rapikan spasi setelah koma
+nama = nama.replace(/,/g, ", ")
+nama = nama.replace(/\s+/g, " ").trim()
+  nama = nama.split(" ").map(kata => {
+  return kata.charAt(0).toUpperCase() + kata.slice(1)
+}).join(" ")
+</script>
+  
 </body>
 </html>
