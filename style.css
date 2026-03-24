@@ -77,7 +77,7 @@ font-weight:bold;
 .btn{
   display:inline-block;
   margin-top:30px;            /* 🔽 lebih turun */
-  padding:16px 40px;          /* 🔥 lebih besar */
+  padding:20px 40px;          /* 🔥 lebih besar */
   background:#7b4a5a;
   color:white;
   border-radius:30px;         /* lebih smooth */
