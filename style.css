@@ -75,13 +75,17 @@ font-weight:bold;
 }
 
 .btn{
-display:inline-block;
-margin-top:10px;
-padding:12px 26px;
-background:#7b4a5a;
-color:white;
-border-radius:25px;
-text-decoration:none;
+  display:inline-block;
+  margin-top:30px;            /* 🔽 lebih turun */
+  padding:16px 40px;          /* 🔥 lebih besar */
+  background:#7b4a5a;
+  color:white;
+  border-radius:30px;         /* lebih smooth */
+  text-decoration:none;
+  font-size:18px;             /* teks lebih jelas */
+  font-weight:500;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2); /* efek mengangkat */
+  transition:0.3s;
 }
 
 .nav{
