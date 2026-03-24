@@ -98,5 +98,5 @@ if (nama) {
   nama = nama.replace(/\b\w/g, c => c.toUpperCase())
 
   document.getElementById("nama-tamu").innerText =
-    sapaan + " " + nama
+  nama
 }
