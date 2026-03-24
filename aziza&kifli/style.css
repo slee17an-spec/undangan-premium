@@ -33,6 +33,7 @@ padding:20px;
 .bg5{background-image:url("assets/bg5.png");}
 .bg6{background-image:url("assets/bg6.png");}
 .bg7{background-image:url("assets/bg7.png");}
+.bg8{background-image:url("assets/bg8.png");}
 
 .coverContent{
 position:absolute;
@@ -42,7 +43,7 @@ width:100%;
 
 .monogram{
 font-size:60px;
-color:#7b4a5a;
+color:#00000000;
 font-weight:bold;
 }
 
@@ -74,13 +75,17 @@ font-weight:bold;
 }
 
 .btn{
-display:inline-block;
-margin-top:10px;
-padding:12px 26px;
-background:#7b4a5a;
-color:white;
-border-radius:25px;
-text-decoration:none;
+  display:inline-block;
+  margin-top:30px;            /* 🔽 lebih turun */
+  padding:16px 40px;          /* 🔥 lebih besar */
+  background:#7b4a5a;
+  color:white;
+  border-radius:30px;         /* lebih smooth */
+  text-decoration:none;
+  font-size:18px;             /* teks lebih jelas */
+  font-weight:500;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2); /* efek mengangkat */
+  transition:0.3s;
 }
 
 .nav{
@@ -106,7 +111,41 @@ font-size:20px;
 font-weight:bold;
 }
 
-.map{
-width:100%;
-border-radius:15px;
+.maps-image {
+  width: 100%;
+  max-width: 400px;   /* batas maksimal biar tidak kebesaran */
+  height: auto;
+  display: block;
+  margin: 15px auto;  /* center */
+  border-radius: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.maps-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.spotifyWrapper{
+background:white;
+padding:10px;
+border-radius:16px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+#music-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 999;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
 }
