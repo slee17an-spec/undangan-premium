@@ -1,27 +1,33 @@
-// ================= OPEN INVITATION =================
+// ================= ELEMENT =================
 const openBtn = document.getElementById("btn")
 const music = document.getElementById("bg-music")
+const btnMusic = document.getElementById("music-btn")
 
+
+// ================= OPEN INVITATION =================
 openBtn.addEventListener("click", () => {
+
   music.play()
 
   window.scrollTo({
     top: window.innerHeight,
     behavior: "smooth"
   })
+
 })
 
 
 // ================= COUNTDOWN =================
-// pakai timezone WITA (UTC+8)
+// WITA (UTC +8)
 const weddingDate = new Date("2026-03-30T19:00:00+08:00")
 
-setInterval(() => {
+const interval = setInterval(() => {
 
   const now = new Date()
   const diff = weddingDate - now
 
   if (diff <= 0) {
+    clearInterval(interval)
     document.querySelector(".countdown").innerHTML = "Acara Dimulai"
     return
   }
@@ -39,17 +45,10 @@ setInterval(() => {
 }, 1000)
 
 
-// ================= COPY DANA =================
-function copyDana() {
-  navigator.clipboard.writeText("082211864752")
-  alert("Nomor DANA berhasil disalin")
-}
-
-
 // ================= MUSIC CONTROL =================
-const btnMusic = document.getElementById("music-btn")
 let isPlaying = false
 
+// autoplay setelah klik (biar tidak diblok HP)
 document.body.addEventListener("click", function () {
   if (!isPlaying) {
     music.play()
@@ -57,6 +56,7 @@ document.body.addEventListener("click", function () {
   }
 })
 
+// tombol play / pause
 btnMusic.addEventListener("click", function () {
   if (music.paused) {
     music.play()
@@ -66,3 +66,10 @@ btnMusic.addEventListener("click", function () {
     btnMusic.innerHTML = "🔇"
   }
 })
+
+
+// ================= COPY DANA =================
+function copyDana() {
+  navigator.clipboard.writeText("082211864752")
+  alert("Nomor DANA berhasil disalin")
+}
