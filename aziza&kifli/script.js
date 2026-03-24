@@ -71,3 +71,23 @@ function copyDana() {
   navigator.clipboard.writeText("082211864752")
   alert("Nomor DANA berhasil disalin")
 }
+
+// ================= NAMA TAMU (SIMPLE) =================
+const urlParams = new URLSearchParams(window.location.search)
+let nama = urlParams.get("to")
+
+if (nama) {
+
+  nama = decodeURIComponent(nama).trim()
+
+  // rapikan koma & spasi
+  nama = nama.replace(/,/g, ", ")
+  nama = nama.replace(/\s+/g, " ").trim()
+
+  // kapitalisasi tiap kata
+  nama = nama.split(" ").map(kata => {
+    return kata.charAt(0).toUpperCase() + kata.slice(1)
+  }).join(" ")
+
+  document.getElementById("nama-tamu").innerText = nama
+}
