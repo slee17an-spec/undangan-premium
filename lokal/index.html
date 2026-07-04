@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#b8862f">
-  <title>Isi Undangan Pernikahan</title>
+  <title>Template Undangan Pernikahan</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar no-print">
     <div>
       <p class="eyebrow">Template Khusus Pernikahan</p>
-      <h1>Isi Undangan Pernikahan</h1>
-      <p class="lead">Format dibuat mengikuti contoh: sisi kiri berisi pembuka, nama mempelai, dan waktu penyelenggaraan; sisi kanan berisi ayat Ar-Ruum 21 dan keluarga pengundang. Cetak A4 akan menghasilkan 2 pasang undangan dalam 1 lembar.</p>
+      <h1>Template Undangan Pernikahan</h1>
+      <p class="lead">Template mengikuti contoh undangan pernikahan, namun sekarang lebih fleksibel: bisa memilih ukuran kertas, jenis font, background, warna aksen, serta ornamen dan aksesoris.</p>
     </div>
     <div class="top-actions">
       <button id="printBtn" class="btn primary">Cetak / Simpan PDF</button>
@@ -56,6 +56,88 @@
         <label>Daftar Keluarga <span>satu baris satu keluarga</span><textarea id="keluarga" rows="10"></textarea></label>
       </section>
 
+      <section class="panel">
+        <h2>Desain Template</h2>
+        <div class="grid two">
+          <label>Ukuran Kertas
+            <select id="ukuranKertas">
+              <option value="f4">F4 / Folio (21,59 × 33,33 cm)</option>
+              <option value="a4">A4 (21 × 29,7 cm)</option>
+              <option value="letter">Letter (21,59 × 27,94 cm)</option>
+              <option value="legal">Legal (21,59 × 35,56 cm)</option>
+            </select>
+          </label>
+          <label>Warna Aksen
+            <select id="warnaAksen">
+              <option value="gold">Emas Klasik</option>
+              <option value="rose">Rose Gold</option>
+              <option value="emerald">Hijau Islami</option>
+              <option value="navy">Biru Royal</option>
+              <option value="maroon">Maroon Adat</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid two">
+          <label>Background
+            <select id="backgroundStyle">
+              <option value="cream">Cream Klasik</option>
+              <option value="white">Putih Bersih</option>
+              <option value="sand">Pasir Elegan</option>
+              <option value="blush">Blush Lembut</option>
+              <option value="mint">Mint Segar</option>
+            </select>
+          </label>
+          <label>Ornamen / Vektor
+            <select id="ornamentStyle">
+              <option value="classic">Klasik</option>
+              <option value="floral">Floral</option>
+              <option value="royal">Royal</option>
+              <option value="minimal">Minimal</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid two">
+          <label>Font Judul / Nama
+            <select id="fontJudul">
+              <option value="elegant">Elegant Serif</option>
+              <option value="roman">Roman Classic</option>
+              <option value="garamond">Garamond Style</option>
+              <option value="formal">Formal Serif</option>
+              <option value="script">Script Lembut</option>
+            </select>
+          </label>
+          <label>Font Isi
+            <select id="fontIsi">
+              <option value="serif">Serif Formal</option>
+              <option value="book">Book Classic</option>
+              <option value="times">Times</option>
+              <option value="sans">Sans Clean</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid two">
+          <label>Font Arab
+            <select id="fontArab">
+              <option value="arabic">Traditional Arabic</option>
+              <option value="naskh">Naskh Style</option>
+              <option value="serifarab">Serif Arabic</option>
+            </select>
+          </label>
+          <label>Label Section
+            <select id="styleLabel">
+              <option value="uppercase">Huruf Besar</option>
+              <option value="titlecase">Normal Title</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid two checks">
+          <label class="check"><input type="checkbox" id="showMonogram" checked> Tampilkan Monogram</label>
+          <label class="check"><input type="checkbox" id="showBottomOrn" checked> Tampilkan Ornamen Bawah</label>
+          <label class="check"><input type="checkbox" id="showTopOrn" checked> Tampilkan Ornamen Atas Belakang</label>
+          <label class="check"><input type="checkbox" id="showBorders" checked> Tampilkan Bingkai</label>
+        </div>
+      </section>
+
       <section class="panel action-panel">
         <button id="saveBtn" class="btn primary">Simpan Draft</button>
         <button id="sampleBtn" class="btn">Isi Contoh</button>
@@ -68,10 +150,13 @@
 
     <section class="preview-wrap">
       <div class="preview-head no-print">
-        <div><strong>Preview A4</strong><span>2 pasang undangan dalam 1 lembar, sesuai contoh.</span></div>
+        <div>
+          <strong>Preview Cetak</strong>
+          <span>Ukuran default menggunakan F4 / Folio 21,59 × 33,33 cm. Saat mencetak, pilih ukuran kertas yang sama di dialog print browser.</span>
+        </div>
         <div class="zoom"><button id="minus" class="btn small">-</button><button id="plus" class="btn small">+</button></div>
       </div>
-      <section id="sheet" class="a4-sheet">
+      <section id="sheet" class="sheet-grid paper-f4 bg-cream accent-gold orn-classic labels-uppercase bordered">
         <article class="card front-card"></article>
         <article class="card back-card"></article>
         <article class="card front-card"></article>
