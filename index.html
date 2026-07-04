@@ -1,331 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Undangan Sirpan & Nur</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#9b6b2f" />
+  <title>Undangan Premium Lokal</title>
+  <style>
+    :root{--bg:#f4ede3;--paper:#fffaf1;--text:#241915;--muted:#72645a;--line:#dfd2c1;--accent:#a66b22;--soft:rgba(166,107,34,.12);--danger:#a73838;--shadow:0 22px 60px rgba(36,25,21,.16)}
+    *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at top left,#fff7df,transparent 34%),linear-gradient(135deg,#f8f1e8,#ebe0d4);min-height:100vh}button,input,select,textarea{font:inherit}.no-print{} .top{max-width:1320px;margin:auto;padding:26px 22px;display:flex;justify-content:space-between;gap:24px;align-items:flex-end}.eyebrow{margin:0 0 8px;color:var(--accent);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.22em}.top h1{margin:0;font-size:clamp(34px,5vw,64px);line-height:.95;letter-spacing:-.05em}.lead{max-width:760px;margin:14px 0 0;color:var(--muted);line-height:1.6}.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.badges span{border:1px solid var(--line);background:rgba(255,255,255,.75);border-radius:99px;padding:7px 10px;font-size:12px;font-weight:800}.actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}.app{max-width:1320px;margin:0 auto;padding:0 22px 26px;display:grid;grid-template-columns:minmax(340px,510px) 1fr;gap:24px}.panel{position:sticky;top:16px;align-self:start;background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:18px;backdrop-filter:blur(12px)}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}.tab{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 8px;color:var(--muted);font-weight:900;cursor:pointer}.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}.page{display:none}.page.active{display:block}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{margin-bottom:13px}.field label{display:flex;justify-content:space-between;gap:8px;margin-bottom:6px;font-size:13px;font-weight:900}.field label small{color:var(--muted);font-weight:700}input,select,textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:15px;padding:12px 13px;color:var(--text);outline:none}textarea{resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--soft)}.btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:11px 15px;font-weight:900;color:var(--text);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px}.btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(0,0,0,.08)}.primary{background:var(--accent);border-color:var(--accent);color:#fff}.soft{background:var(--soft);border-color:rgba(166,107,34,.25);color:var(--accent)}.danger{background:rgba(167,56,56,.08);border-color:rgba(167,56,56,.25);color:var(--danger)}.file input{display:none}.wide{width:100%}.button-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.hint{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.5}.previewbar{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:20px;padding:12px 15px;margin-bottom:14px;display:flex;justify-content:space-between;gap:10px;align-items:center}.previewbar span{display:block;color:var(--muted);font-size:12px}.paper{--zoom:1;transform:scale(var(--zoom));transform-origin:top center;width:min(100%,760px);min-height:980px;margin:0 auto 34px;padding:54px 50px;background:var(--paper);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);position:relative;overflow:hidden}.paper:before{content:"";position:absolute;inset:18px;border:1px solid rgba(166,107,34,.42);border-radius:25px;pointer-events:none}.paper:after{content:"";position:absolute;width:230px;height:230px;border:2px solid var(--accent);opacity:.13;right:-105px;top:-105px;transform:rotate(45deg)}.invite{position:relative;z-index:1;text-align:center}.bismillah{font-family:Georgia,serif;font-size:28px;margin:8px 0 12px;color:var(--accent)}.type{font-size:12px;text-transform:uppercase;letter-spacing:.22em;font-weight:900;color:var(--accent);margin:0 0 18px}.title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(34px,6vw,58px);line-height:1.04;margin:0 0 18px;letter-spacing:-.04em}.guest{max-width:470px;margin:22px auto;padding:18px 20px;border:1px solid rgba(166,107,34,.5);border-radius:20px;background:rgba(255,255,255,.6)}.guest small{display:block;color:var(--muted);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:12px}.guest b{display:block;font-size:24px;margin:5px 0}.names{font-family:Georgia,'Times New Roman',serif;font-size:clamp(34px,5vw,52px);line-height:1.08;color:var(--accent);margin:22px 0 8px}.desc{white-space:pre-line;color:var(--muted);line-height:1.6;margin:0 auto 22px;max-width:560px}.p{font-size:16px;line-height:1.75;margin:15px auto;max-width:620px;color:#3e332d}.divider{display:flex;align-items:center;justify-content:center;gap:10px;margin:24px 0}.divider:before,.divider:after{content:"";width:90px;height:1px;background:var(--accent);opacity:.55}.divider span{width:8px;height:8px;background:var(--accent);border-radius:50%}.info{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:620px;margin:24px auto;text-align:left}.box{background:rgba(255,255,255,.62);border:1px solid var(--line);border-radius:18px;padding:15px;line-height:1.55}.box strong{display:block;color:var(--accent);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}.location{max-width:620px;margin:0 auto 20px;text-align:center}.families{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:620px;margin:28px auto 0}.family{border-top:1px solid var(--line);padding-top:14px;white-space:pre-line;line-height:1.55}.note{font-size:14px;color:var(--muted);line-height:1.6;max-width:590px;margin:24px auto 0}.links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}.links a{border:1px solid var(--accent);border-radius:999px;color:var(--accent);text-decoration:none;padding:9px 13px;font-size:13px;font-weight:900}.brand{margin-top:26px;color:var(--muted);font-size:12px;font-weight:800}.formal{border-radius:8px;text-align:left;background:#fff}.formal .invite{text-align:left}.formal .bismillah,.formal .type,.formal .title{text-align:center}.formal .title{font-size:30px;text-decoration:underline}.formal .guest{margin-left:0;max-width:none;border-style:dashed}.formal .p,.formal .info,.formal .location,.formal .families{max-width:none}.simple{min-height:auto;padding:38px}.simple .title{font-size:36px}.simple .brand{display:none}.amplop{width:min(100%,900px);min-height:430px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center}.amplop .bismillah,.amplop .type,.amplop .title,.amplop .p,.amplop .names,.amplop .desc,.amplop .divider,.amplop .info,.amplop .location,.amplop .families,.amplop .note,.amplop .links,.amplop .brand{display:none}.amplop .guest{margin-left:auto;margin-right:0;max-width:540px;border:none;background:transparent;text-align:left}.amplop .guest b{font-size:35px}.a4{width:794px;min-height:1123px}.a5{width:560px;min-height:794px}.pa{width:900px;min-height:420px}.theme-emerald{--accent:#13795b;--paper:#f3fff9}.theme-maroon{--accent:#8f2539;--paper:#fff5f6}.theme-royal{--accent:#225a9b;--paper:#f4f9ff}.theme-dusk{--accent:#6b3fa0;--paper:#fbf7ff}.theme-mono{--accent:#111;--paper:#fff}.theme-floral{--accent:#b04b78;--paper:#fff7fb}.theme-ocean{--accent:#0b7285;--paper:#f1fdff}.stack{display:none}.footer{text-align:center;color:var(--muted);font-size:13px;padding:8px 22px 30px}@media(max-width:990px){.top{flex-direction:column;align-items:flex-start}.actions{justify-content:flex-start}.app{grid-template-columns:1fr}.panel{position:relative;top:auto}.grid2,.info,.families{grid-template-columns:1fr}.paper{width:100%;padding:36px 24px}.tabs{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.top,.app{padding-left:14px;padding-right:14px}.panel{padding:14px;border-radius:18px}.button-grid{grid-template-columns:1fr}.actions,.actions .btn{width:100%}.paper{border-radius:18px}.previewbar{align-items:flex-start;flex-direction:column}.btn{width:100%}}@media print{.no-print,.top,.panel,.previewbar,.footer{display:none!important}body{background:#fff}.app{display:block;max-width:none;margin:0;padding:0}.paper{transform:none!important;margin:0 auto;border:none;box-shadow:none;border-radius:0;page-break-after:always;width:auto;min-height:auto}.paper:before,.paper:after{display:none}.digital{width:100%;min-height:100vh}.a4{width:210mm;min-height:297mm}.a5{width:148mm;min-height:210mm}.pa{width:220mm;min-height:110mm}.stack{display:block}.printing-all>#card{display:none!important}@page{margin:10mm}}
+  </style>
 </head>
-
 <body>
-
-<div class="wrapper">
-
-
-<!-- ================= COVER ================= -->
-
-<section class="page bg1">
-
-<div class="coverContent">
-
-<p class="date">
-Minggu<br>
-5 Juli 2026
-</p>
-
-<h1 class="monogram">
-.
-</h1>
-
-<h2 class="couple">
-SIRPAN & NUR
-</h2>
-
-<p class="save">
-SAVE THE DATE
-</p>
-
-<br>
-<p>Kepada Yth</p>
-<h3 id="nama-tamu">Tamu Undangan</h3>
-
-<button id="btn">
-Open Invitation
-</button>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= QUOTES ================= -->
-
-<section class="page bg2">
-
-<div class="content">
-
-<p class="quote">
-
-Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
-untukmu pasangan hidup dari jenismu sendiri,
-supaya kamu cenderung dan merasa tenteram kepadanya,
-dan dijadikan-Nya di antaramu rasa kasih dan sayang.
-
-Sesungguhnya pada yang demikian itu benar-benar terdapat
-tanda-tanda bagi kaum yang berfikir.
-
-</p>
-
-<p class="ayat">(Ar-Rum : 21)</p>
-
-</div>
-
-<div class="nav">
-<div>Couple</div>
-<div>Quotes</div>
-<div>Memories</div>
-<div>Akad</div>
-</div>
-
-</section>
-
-
-
-<!-- ================= COUPLE ================= -->
-
-<section class="page bg3">
-
-<div class="content">
-
-<p class="bismillah">
-Bismillahirrahmanirrahim
-</p>
-
-<p class="intro">
-
-Dengan memohon Rahmat dan Ridho Allah SWT
-kami mengundang Bapak/ Ibu/ saudara/i 
-untuk menghadiri resepsi pernikahan kami
-
-</p>
-
-
-<h2 class="gold">
-Sirpan Bin Abd. Aziz
-</h2>
-
-<p>Putra kedua dari</p>
-
-<p>Bapak Abd. Aziz & Ibu Hajra</p>
-
-
-<p class="dengan">
-DENGAN
-</p>
-
-
-<h2 class="gold">
-Nur Binti Hasan
-</h2>
-
-<p>Putra Kedua dari</p>
-
-<p>Bapak Hasan & Ibu Mase</p>
-
-
-</div>
-
-<div class="nav">
-<div>Couple</div>
-<div>Quotes</div>
-<div>Memories</div>
-<div>Akad</div>
-</div>
-
-</section>
-
-
-
-<!-- ================= COUNTDOWN ================= -->
-
-<section class="page bg4">
-
-<div class="content">
-
-<div class="countdown">
-
-<div class="box">
-<span id="days">0</span>
-<p>Hari</p>
-</div>
-
-<div class="box">
-<span id="hours">0</span>
-<p>Jam</p>
-</div>
-
-<div class="box">
-<span id="minutes">0</span>
-<p>Menit</p>
-</div>
-
-<div class="box">
-<span id="seconds">0</span>
-<p>Detik</p>
-</div>
-
-</div>
-
-<p class="info">
-
-Kirim ucapan untuk mempelai
-dan konfirmasi kehadiran
-
-</p>
-
-<a class="btn"
-href="https://wa.me/6282211864752">
-
-Kirim Ucapan RSVP
-
-</a>
-
-</div>
-
-<div class="nav">
-<div>Couple</div>
-<div>Quotes</div>
-<div>Memories</div>
-<div>Akad</div>
-</div>
-
-</section>
-
-
-
-<!-- ================= AKAD ================= -->
-
-<section class="page bg5">
-
-<div class="content">
-
-<h1 class="title">
-PERJAMUAN
-</h1>
-
-<p class="dateBig">
-Minggu, 5 Juli 2026
-</p>
-
-<p>
-Pukul 19.30 WITA
-</p>
-
-<br>
-
-<p class="locTitle">
-LOKASI ACARA
-</p>
-
-<p>
-Samping Masjid "BABUL JANNAH"<br>
-Dusun Bugis Desa Kombo <br>
-Kecamatan Dampal Selatan Kab. Tolitoli
-</p>
-
-</div>
-
-<div class="nav">
-<div>Couple</div>
-<div>Quotes</div>
-<div>Memories</div>
-<div>Akad</div>
-</div>
-
-</section>
-
-
-
-<!-- ================= MAPS ================= -->
-
-<section class="page bg6">
-
-<div class="music-section">
-  <h2>Lokasi Pernikahan</h2>
-  <p>Klik peta untuk membuka lokasi</p>
-
-  <a href="https://maps.app.goo.gl/UV35SypH6UJKqjrE8" target="_blank">
-    <img src="assets/maps-preview.jpg" alt="Lokasi Maps" class="maps-image">
-  </a>
-</div>
-</section>
-  
-<!-- ================= GIFT ================= -->
-
-<section class="page bg7">
-
-<div class="content">
-
-<h1>Amplop Digital</h1>
-
-<p>DANA</p>
-
-<h2>082211864752</h2>
-
-<button onclick="copyDana()">
-Salin Nomor
-</button>
-
-<br><br>
-
-<div class="rekening">
-
-<h3>Transfer Bank</h3>
-
-<div class="card">
-
-<p>Bank BRI</p>
-
-<p>Nomor Rekening</p>
-
-<p class="rekeningNumber">
-5226 01 037954 53 6
-</p>
-
-<p>a.n Sirpan</p>
-
-</div>
-
-</div>
-
-<br>
-
-<p>
-Alamat Pengiriman Kado
-</p>
-
-<p>
-Dusun Bugis<br>
-Desa Kombo Kecamatan Dampal Selatan Kab. Tolitoli
-</p>
-
-</div>
-
-<div class="nav">
-<div>Couple</div>
-<div>Quotes</div>
-<div>Memories</div>
-<div>Akad</div>
-</div>
-
-</section>
-
-
-</div>
-  
-<audio id="bg-music" loop>
-  <source src="assets/music.mp3" type="audio/mpeg">
-</audio>
-
-<button id="music-btn">🔊</button>
-
-<script src="script.js"></script>
-  
+  <header class="top no-print">
+    <div>
+      <p class="eyebrow">Generator Undangan Lokal</p>
+      <h1>Undangan Premium Lokal</h1>
+      <p class="lead">Buat undangan digital, surat formal, kartu ringkas, dan amplop nama tamu untuk acara keluarga, agama, desa, sekolah, organisasi, usaha, dan acara umum.</p>
+      <div class="badges"><span>50+ tipe undangan</span><span>Cetak PDF</span><span>Data tamu massal</span><span>Offline browser</span></div>
+    </div>
+    <div class="actions"><button id="printOne" class="btn primary">Cetak / Simpan PDF</button><button id="printAll" class="btn soft">Cetak Semua Tamu</button><button id="copyWa" class="btn">Salin Teks WA</button></div>
+  </header>
+
+  <main class="app">
+    <aside class="panel no-print">
+      <nav class="tabs"><button class="tab active" data-tab="acara">Acara</button><button class="tab" data-tab="desain">Desain</button><button class="tab" data-tab="tamu">Tamu</button><button class="tab" data-tab="data">Data</button></nav>
+      <section id="acara" class="page active">
+        <div class="field"><label>Cari tipe undangan</label><input id="search" type="search" placeholder="tahlilan, rapat, wisuda, maulid, koperasi" /></div>
+        <div class="field"><label>Jenis Undangan</label><select id="type"></select></div>
+        <div class="grid2"><div class="field"><label>Judul Acara</label><input id="title" /></div><div class="field"><label>Nomor Surat <small>opsional</small></label><input id="number" placeholder="001/PAN/VII/2026" /></div></div>
+        <div class="grid2"><div class="field"><label>Nama Utama</label><input id="name1" placeholder="Sirpan" /></div><div class="field"><label>Nama Kedua / Pasangan / Anak</label><input id="name2" placeholder="Nur" /></div></div>
+        <div class="field"><label>Keterangan Nama <small>opsional</small></label><textarea id="nameDesc" rows="2" placeholder="Putra dari ... / Putri dari ..."></textarea></div>
+        <div class="grid2"><div class="field"><label>Hari / Tanggal</label><input id="date" placeholder="Sabtu, 12 Juli 2026" /></div><div class="field"><label>Waktu</label><input id="time" placeholder="Pukul 10.00 WITA - selesai" /></div></div>
+        <div class="field"><label>Tempat / Alamat</label><textarea id="place" rows="3" placeholder="Rumah keluarga besar, Desa Kombo..."></textarea></div>
+        <div class="grid2"><div class="field"><label>Penyelenggara 1</label><textarea id="host1" rows="2"></textarea></div><div class="field"><label>Penyelenggara 2</label><textarea id="host2" rows="2"></textarea></div></div>
+        <div class="field"><label>Catatan Tambahan</label><textarea id="note" rows="3" placeholder="Mohon maaf apabila ada kesalahan penulisan nama dan gelar."></textarea></div>
+      </section>
+      <section id="desain" class="page">
+        <div class="grid2"><div class="field"><label>Tema Warna</label><select id="theme"><option value="gold">Emas Elegan</option><option value="emerald">Hijau Islami</option><option value="maroon">Maroon Adat</option><option value="royal">Biru Formal</option><option value="dusk">Ungu Senja</option><option value="mono">Hitam Putih</option><option value="floral">Floral Lembut</option><option value="ocean">Biru Laut</option></select></div><div class="field"><label>Model</label><select id="layout"><option value="premium">Undangan Premium</option><option value="formal">Surat Formal</option><option value="simple">Kartu Ringkas</option><option value="amplop">Amplop Nama Tamu</option></select></div></div>
+        <div class="grid2"><div class="field"><label>Ukuran Cetak</label><select id="paper"><option value="digital">Digital / HP</option><option value="a4">A4</option><option value="a5">A5</option><option value="pa">Amplop</option></select></div><div class="field"><label>Brand Footer</label><input id="brand" value="Undangan Premium Lokal" /></div></div>
+        <div class="field"><label>Kalimat Pembuka</label><textarea id="open" rows="3"></textarea></div>
+        <div class="field"><label>Isi Undangan</label><textarea id="bodyText" rows="4"></textarea></div>
+        <div class="field"><label>Kalimat Penutup</label><textarea id="close" rows="3"></textarea></div>
+      </section>
+      <section id="tamu" class="page">
+        <div class="field"><label>Nama Tamu Saat Ini</label><input id="guest" placeholder="Bapak/Ibu/Saudara/i" /></div>
+        <div class="field"><label>Daftar Nama Tamu <small>satu nama per baris</small></label><textarea id="guestList" rows="9" placeholder="Bapak Kepala Desa Kombo&#10;Bapak/Ibu Ketua RT&#10;Saudara/i Keluarga Besar"></textarea></div>
+        <div class="actions"><button id="prevGuest" class="btn">Sebelumnya</button><button id="nextGuest" class="btn">Berikutnya</button><button id="useGuest" class="btn soft">Pakai Tamu</button></div><p id="guestCount" class="hint">0 tamu</p>
+      </section>
+      <section id="data" class="page">
+        <div class="grid2"><div class="field"><label>Nomor WhatsApp</label><input id="wa" placeholder="62812xxxx" /></div><div class="field"><label>Link Google Maps</label><input id="maps" placeholder="https://maps.google.com/..." /></div></div>
+        <div class="button-grid"><button id="save" class="btn primary">Simpan Draft</button><button id="sample" class="btn soft">Isi Contoh</button><button id="download" class="btn">Download JSON</button><button id="downloadHtml" class="btn">Download HTML</button><label class="btn file">Import JSON<input id="import" type="file" accept="application/json"></label><button id="reset" class="btn danger">Reset</button></div>
+        <p class="hint">Data tersimpan di browser perangkat ini. Tidak masuk ke server dan bisa dipakai offline setelah halaman terbuka.</p>
+      </section>
+    </aside>
+
+    <section>
+      <div class="previewbar no-print"><div><strong id="activeLabel">Preview</strong><span id="status">Draft otomatis aktif</span></div><div class="actions"><button id="zoomOut" class="btn">-</button><button id="zoomIn" class="btn">+</button></div></div>
+      <article id="card" class="paper"><div id="preview"></div></article>
+      <section id="stack" class="stack"></section>
+    </section>
+  </main>
+  <footer class="footer no-print">Dibuat untuk usaha undangan lokal, admin desa, keluarga, sekolah, koperasi, majelis, dan acara masyarakat.</footer>
+
+  <script>
+    const templates=[
+      ['Keluarga','pernikahan','Undangan Pernikahan'],['Keluarga','akad','Undangan Akad Nikah'],['Keluarga','resepsi','Undangan Resepsi'],['Keluarga','lamaran','Undangan Lamaran'],['Keluarga','khitanan','Undangan Khitanan'],['Keluarga','aqiqah','Undangan Aqiqah'],['Keluarga','ulang-tahun','Undangan Ulang Tahun'],['Keluarga','syukuran-rumah','Syukuran Rumah Baru'],['Keluarga','wisuda','Syukuran Wisuda / Kelulusan'],['Keluarga','hajatan','Undangan Hajatan Keluarga'],['Keluarga','pertemuan-keluarga','Pertemuan Keluarga'],['Keluarga','doa-keselamatan','Doa Keselamatan'],
+      ['Keagamaan','tahlilan','Undangan Tahlilan'],['Keagamaan','yasinan','Undangan Yasinan'],['Keagamaan','doa-kematian','Doa Kematian'],['Keagamaan','doa-7-hari','Doa 7 Hari'],['Keagamaan','doa-40-hari','Doa 40 Hari'],['Keagamaan','doa-100-hari','Doa 100 Hari'],['Keagamaan','doa-1000-hari','Doa 1000 Hari'],['Keagamaan','maulid','Maulid Nabi'],['Keagamaan','isra-miraj','Isra Mi\'raj'],['Keagamaan','halal-bihalal','Halal Bihalal'],['Keagamaan','buka-puasa','Buka Puasa Bersama'],['Keagamaan','majelis-taklim','Majelis Taklim'],['Keagamaan','pengajian','Pengajian Umum'],['Keagamaan','khatam-quran','Khatam Al-Qur’an'],
+      ['Desa','rapat-desa','Rapat Desa'],['Desa','musyawarah-desa','Musyawarah Desa'],['Desa','rapat-rt-rw','Rapat RT/RW'],['Desa','gotong-royong','Gotong Royong'],['Desa','posyandu','Posyandu'],['Desa','sosialisasi','Sosialisasi Desa'],['Desa','panen-raya','Panen Raya'],['Desa','lomba-17','Lomba 17 Agustus'],['Desa','peresmian','Peresmian'],
+      ['Organisasi','rapat-koperasi','Rapat Koperasi'],['Organisasi','musyawarah-koperasi','Musyawarah Koperasi'],['Organisasi','karang-taruna','Karang Taruna'],['Organisasi','arisan','Arisan'],['Organisasi','reuni','Reuni'],
+      ['Sekolah','rapat-sekolah','Rapat Sekolah'],['Sekolah','komite-sekolah','Rapat Komite Sekolah'],['Sekolah','perpisahan-sekolah','Perpisahan Sekolah'],['Sekolah','pengambilan-rapor','Pengambilan Rapor'],
+      ['Usaha','pembukaan-usaha','Pembukaan Usaha'],['Usaha','launching-produk','Launching Produk'],['Usaha','pelatihan','Pelatihan / Workshop'],['Usaha','seminar','Seminar'],['Umum','olahraga','Pertandingan Olahraga'],['Umum','hiburan-rakyat','Hiburan Rakyat'],['Umum','umum','Undangan Umum']
+    ].map(x=>({group:x[0],id:x[1],label:x[2],title:x[2]}));
+    const $=id=>document.getElementById(id),ids=['type','title','number','name1','name2','nameDesc','date','time','place','host1','host2','note','theme','layout','paper','brand','open','bodyText','close','guest','guestList','wa','maps'];let zoom=1,guestIndex=0,filtered=[...templates];
+    const esc=s=>String(s||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;').replaceAll('\n','<br>');
+    const val=id=>($(id)?.value||'').trim();const data=()=>Object.fromEntries(ids.map(id=>[id,val(id)]));const active=()=>templates.find(t=>t.id===val('type'))||templates[0];const guests=()=>val('guestList').split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+    function wording(t){let g=t.group,l=t.label.toLowerCase();let open='Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara:';let body='Kehadiran Bapak/Ibu/Saudara/i sangat kami harapkan demi kelancaran dan keberkahan acara.';let note='Atas perhatian, doa, dan kehadirannya kami ucapkan terima kasih.';if(g==='Keluarga'){open='Dengan penuh syukur dan kebahagiaan, kami bermaksud menyelenggarakan acara:';body='Merupakan kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa.'}if(g==='Keagamaan'){open='Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri:';body='Semoga kegiatan ini membawa keberkahan, ketenangan, dan mempererat silaturahmi.'}if(g==='Desa'){open='Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri kegiatan:';body='Mengingat pentingnya kegiatan ini, kehadiran dan partisipasi Bapak/Ibu/Saudara/i sangat kami harapkan.'}if(g==='Sekolah'){open='Dengan hormat, kami mengundang Bapak/Ibu orang tua/wali untuk menghadiri:';body='Kehadiran Bapak/Ibu sangat penting untuk mendukung kelancaran kegiatan pendidikan.'}if(g==='Usaha'){open='Dengan penuh syukur, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri:';body='Kehadiran dan dukungan Bapak/Ibu/Saudara/i menjadi kehormatan bagi kami.'}if(l.includes('kematian')||l.includes('hari')){open='Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri doa bersama atas wafatnya:';body='Semoga almarhum/almarhumah diterima amal ibadahnya, diampuni dosanya, dan keluarga diberi ketabahan.'}if(l.includes('pernikahan')||l.includes('akad')||l.includes('resepsi')){open='Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara:';body='Merupakan kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.'}return{open,body,note,close:'Demikian undangan ini kami sampaikan. Atas perhatian, doa, dan kehadirannya kami ucapkan terima kasih.'}}
+    function fill(){let q=val('search').toLowerCase();filtered=templates.filter(t=>(t.group+' '+t.label).toLowerCase().includes(q));if(!filtered.length)filtered=[...templates];let groups=[...new Set(filtered.map(t=>t.group))];$('type').innerHTML=groups.map(g=>'<optgroup label="'+g+'">'+filtered.filter(t=>t.group===g).map(t=>'<option value="'+t.id+'">'+t.label+'</option>').join('')+'</optgroup>').join('')}
+    function defaults(force=false){let t=active(),w=wording(t);if(force||!val('title'))$('title').value=t.title;if(force||!val('open'))$('open').value=w.open;if(force||!val('bodyText'))$('bodyText').value=w.body;if(force||!val('close'))$('close').value=w.close;if(force||!val('note'))$('note').value=w.note}
+    function classes(d){return 'paper '+(d.layout||'premium')+' '+(d.paper||'digital')+' theme-'+(d.theme||'gold')}
+    function card(d,guest){let t=templates.find(x=>x.id===d.type)||active(),names=[d.name1,d.name2].filter(Boolean).join(' & '),phone=(d.wa||'').replace(/[^0-9]/g,'').replace(/^0/,'62'),links=(d.maps?'<a href="'+esc(d.maps)+'">Buka Maps</a>':'')+(phone?'<a href="https://wa.me/'+phone+'">WhatsApp</a>':'');return `<div class="invite"><p class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>${d.number?'<p class="hint">Nomor: '+esc(d.number)+'</p>':''}<p class="type">${esc(t.label)}</p><h2 class="title">${esc(d.title||t.title)}</h2><div class="guest"><small>Kepada Yth.</small><b>${esc(guest||d.guest||'Bapak/Ibu/Saudara/i')}</b><small>di tempat</small></div><p class="p"><b>Assalamu’alaikum Warahmatullahi Wabarakatuh</b></p><p class="p">${esc(d.open)}</p>${names?'<div class="names">'+esc(names)+'</div>':''}${d.nameDesc?'<p class="desc">'+esc(d.nameDesc)+'</p>':''}<div class="divider"><span></span></div><p class="p">${esc(d.bodyText)}</p><div class="info"><div class="box"><strong>Hari / Tanggal</strong>${esc(d.date||'Hari dan tanggal acara')}</div><div class="box"><strong>Waktu</strong>${esc(d.time||'Waktu acara')}</div></div><div class="box location"><strong>Tempat</strong>${esc(d.place||'Alamat/tempat acara')}</div><p class="p">${esc(d.close)}</p><p class="p"><b>Wassalamu’alaikum Warahmatullahi Wabarakatuh</b></p><div class="families"><div class="family">${esc(d.host1||'Penyelenggara / Keluarga 1')}</div><div class="family">${esc(d.host2||'Penyelenggara / Keluarga 2')}</div></div>${d.note?'<p class="note">'+esc(d.note)+'</p>':''}${links?'<div class="links">'+links+'</div>':''}${d.brand?'<div class="brand">'+esc(d.brand)+'</div>':''}</div>`}
+    function render(){let d=data();$('card').className=classes(d);$('card').style.setProperty('--zoom',zoom);$('preview').innerHTML=card(d,d.guest);$('activeLabel').textContent=active().label;let n=guests().length;$('guestCount').textContent=n?`${n} tamu • posisi ${Math.min(guestIndex+1,n)}`:'0 tamu'}
+    function save(silent=true){localStorage.setItem('undangan-premium-lokal',JSON.stringify(data(),null,2));$('status').textContent='Draft tersimpan';if(!silent)alert('Draft tersimpan di browser ini.')}
+    function load(){try{let raw=localStorage.getItem('undangan-premium-lokal');if(!raw)return false;let d=JSON.parse(raw);ids.forEach(id=>{if($(id)&&d[id]!=null)$(id).value=d[id]});return true}catch{return false}}
+    function sample(){Object.entries({type:'pernikahan',title:'Undangan Pernikahan',name1:'Sirpan',name2:'Nur',nameDesc:'Putra & putri dari keluarga besar yang berbahagia',date:'Sabtu, 12 Juli 2026',time:'Pukul 10.00 WITA - selesai',place:'Rumah keluarga besar, Desa Kombo, Kecamatan Dampal Selatan, Kabupaten Tolitoli',host1:'Keluarga Besar Sirpan',host2:'Keluarga Besar Nur',theme:'gold',layout:'premium',paper:'digital',brand:'Undangan Premium Lokal',guest:'Bapak/Ibu/Saudara/i',guestList:'Bapak Kepala Desa Kombo\nBapak/Ibu Ketua RT\nSaudara/i Keluarga Besar\nSahabat dan Kerabat'}).forEach(([k,v])=>$(k)&&( $(k).value=v));defaults(true);render();save(true)}
+    function download(name,content,type='application/json'){let b=new Blob([content],{type}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(u)}
+    document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab,.page').forEach(x=>x.classList.remove('active'));b.classList.add('active');$(b.dataset.tab).classList.add('active')});$('search').oninput=()=>{fill();defaults(true);render()};$('type').onchange=()=>{defaults(true);render();save(true)};ids.filter(x=>x!=='type').forEach(id=>$(id)?.addEventListener('input',()=>{render();save(true)}));['theme','layout','paper'].forEach(id=>$(id).addEventListener('change',()=>{render();save(true)}));$('save').onclick=()=>save(false);$('sample').onclick=sample;$('reset').onclick=()=>confirm('Reset semua data?')&&(localStorage.removeItem('undangan-premium-lokal'),sample());$('download').onclick=()=>download('data-undangan.json',JSON.stringify(data(),null,2));$('downloadHtml').onclick=()=>download('undangan.html','<!doctype html><html lang="id"><meta charset="utf-8"><title>Undangan</title><body>'+$('card').outerHTML+'</body></html>','text/html');$('import').onchange=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);ids.forEach(id=>{if($(id)&&d[id]!=null)$(id).value=d[id]});render();save(true)}catch{alert('File JSON tidak valid')}};r.readAsText(f)};$('printOne').onclick=()=>window.print();$('printAll').onclick=()=>{let list=guests();if(!list.length)return alert('Isi daftar tamu dahulu.');let d=data();$('stack').innerHTML=list.map(g=>'<article class="'+classes(d)+'"><div>'+card(d,g)+'</div></article>').join('');document.body.classList.add('printing-all');window.print();setTimeout(()=>{document.body.classList.remove('printing-all');$('stack').innerHTML=''},500)};$('copyWa').onclick=()=>{let d=data(),text=`${d.title||active().title}\n\nKepada Yth. ${d.guest||'Bapak/Ibu/Saudara/i'}\n\n${d.open}\n${[d.name1,d.name2].filter(Boolean).join(' & ')}\n\nHari/Tanggal: ${d.date||'-'}\nWaktu: ${d.time||'-'}\nTempat: ${d.place||'-'}\n\n${d.close}${d.maps?'\nLokasi: '+d.maps:''}`;navigator.clipboard?.writeText(text).then(()=>alert('Teks WhatsApp disalin.')).catch(()=>alert(text))};function moveGuest(step){let list=guests();if(!list.length)return;guestIndex=(guestIndex+step+list.length)%list.length;$('guest').value=list[guestIndex];render();save(true)}$('prevGuest').onclick=()=>moveGuest(-1);$('nextGuest').onclick=()=>moveGuest(1);$('useGuest').onclick=()=>moveGuest(0);$('zoomIn').onclick=()=>{zoom=Math.min(1.2,+(zoom+.05).toFixed(2));render()};$('zoomOut').onclick=()=>{zoom=Math.max(.65,+(zoom-.05).toFixed(2));render()};fill();if(!load())sample();defaults(false);render();
+  </script>
 </body>
 </html>
