@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#b8862f">
   <title>Template Undangan Pernikahan</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print-fix.css">
 </head>
 <body>
   <header class="topbar no-print">
@@ -14,98 +15,21 @@
       <h1>Template Undangan Pernikahan</h1>
       <p class="lead">Editor online bergaya dokumen: isi data, pilih kertas, font, background, bingkai, vektor, aksesoris, lalu cetak. Default disiapkan untuk F4/Folio 21,59 × 33,33 cm.</p>
     </div>
-    <div class="top-actions">
-      <button id="printBtn" class="btn primary">Cetak / Simpan PDF</button>
-      <button id="copyBtn" class="btn">Salin Teks WA</button>
-    </div>
+    <div class="top-actions"><button id="printBtn" class="btn primary">Cetak / Simpan PDF</button><button id="copyBtn" class="btn">Salin Teks WA</button></div>
   </header>
-
   <main class="workspace">
     <aside class="editor no-print">
-      <section class="panel">
-        <h2>Data Mempelai</h2>
-        <div class="grid two"><label>Inisial Pria<input id="inisialPria" value="S"></label><label>Inisial Wanita<input id="inisialWanita" value="N"></label></div>
-        <label>Nama Mempelai Pria<input id="namaPria"></label>
-        <label>Keterangan Pria<textarea id="ketPria" rows="2"></textarea></label>
-        <label>Nama Mempelai Wanita<input id="namaWanita"></label>
-        <label>Keterangan Wanita<textarea id="ketWanita" rows="2"></textarea></label>
-      </section>
-
-      <section class="panel">
-        <h2>Waktu Penyelenggaraan</h2>
-        <label>Hari, Tanggal<input id="tanggal"></label>
-        <label>Jam<input id="jam"></label>
-        <label>Tempat<textarea id="tempat" rows="2"></textarea></label>
-        <label>Hiburan<input id="hiburan"></label>
-      </section>
-
-      <section class="panel">
-        <h2>Kalimat Undangan</h2>
-        <label>Kalimat Pembuka<textarea id="pembuka" rows="3"></textarea></label>
-        <label>Ucapan Kehormatan<textarea id="ucapan" rows="4"></textarea></label>
-        <label>Salam Penutup<input id="salamPenutup"></label>
-        <label>Ayat / Kutipan<textarea id="ayat" rows="6"></textarea></label>
-      </section>
-
-      <section class="panel">
-        <h2>Keluarga Pengundang</h2>
-        <label>Judul Pengundang<input id="judulPengundang"></label>
-        <label>Daftar Keluarga <span>satu baris satu keluarga</span><textarea id="keluarga" rows="10"></textarea></label>
-      </section>
-
-      <section class="panel">
-        <h2>Kertas & Cetak</h2>
-        <div class="grid two">
-          <label>Ukuran Kertas<select id="ukuranKertas"><option value="f4">F4 / Folio 21,59 × 33,33 cm</option><option value="a4">A4 21 × 29,7 cm</option><option value="letter">Letter 21,59 × 27,94 cm</option><option value="legal">Legal 21,59 × 35,56 cm</option></select></label>
-          <label>Mode Kepadatan<select id="density"><option value="compact">Kompak - aman 1 lembar</option><option value="normal">Normal</option><option value="loose">Longgar</option></select></label>
-        </div>
-        <div class="grid two">
-          <label>Ukuran Font<select id="fontScale"><option value="small">Kecil</option><option value="medium">Sedang</option><option value="large">Besar</option></select></label>
-          <label>Margin Panel<select id="panelPad"><option value="narrow">Sempit</option><option value="medium">Sedang</option><option value="wide">Lebar</option></select></label>
-        </div>
-      </section>
-
-      <section class="panel">
-        <h2>Desain Online</h2>
-        <div class="grid two">
-          <label>Warna Aksen<select id="warnaAksen"><option value="gold">Emas Klasik</option><option value="rose">Rose Gold</option><option value="emerald">Hijau Islami</option><option value="navy">Biru Royal</option><option value="maroon">Maroon Adat</option></select></label>
-          <label>Background<select id="backgroundStyle"><option value="cream">Cream Klasik</option><option value="white">Putih Bersih</option><option value="sand">Pasir Elegan</option><option value="blush">Blush Lembut</option><option value="mint">Mint Segar</option></select></label>
-        </div>
-        <div class="grid two">
-          <label>Bingkai<select id="frameStyle"><option value="double">Double Line</option><option value="classic">Klasik Sudut</option><option value="thin">Tipis Elegan</option><option value="none">Tanpa Bingkai</option></select></label>
-          <label>Vektor / Ornamen<select id="ornamentStyle"><option value="classic">Klasik</option><option value="floral">Floral</option><option value="royal">Royal</option><option value="minimal">Minimal</option><option value="islamic">Islami</option></select></label>
-        </div>
-        <div class="grid two">
-          <label>Aksesoris Bawah<select id="bottomAccessory"><option value="heart">Hati Ornamen</option><option value="floral">Bunga</option><option value="diamond">Diamond</option><option value="none">Tanpa Aksesoris</option></select></label>
-          <label>Label Section<select id="styleLabel"><option value="uppercase">Huruf Besar</option><option value="titlecase">Normal Title</option></select></label>
-        </div>
-      </section>
-
-      <section class="panel">
-        <h2>Font</h2>
-        <div class="grid two">
-          <label>Font Judul / Nama<select id="fontJudul"><option value="elegant">Elegant Serif</option><option value="roman">Roman Classic</option><option value="garamond">Garamond Style</option><option value="formal">Formal Serif</option><option value="script">Script Lembut</option></select></label>
-          <label>Font Isi<select id="fontIsi"><option value="serif">Serif Formal</option><option value="book">Book Classic</option><option value="times">Times</option><option value="sans">Sans Clean</option></select></label>
-        </div>
-        <label>Font Arab<select id="fontArab"><option value="arabic">Traditional Arabic</option><option value="naskh">Naskh Style</option><option value="serifarab">Serif Arabic</option></select></label>
-      </section>
-
-      <section class="panel">
-        <h2>Tampilkan / Sembunyikan</h2>
-        <div class="grid two checks"><label class="check"><input type="checkbox" id="showMonogram" checked> Monogram</label><label class="check"><input type="checkbox" id="showBottomOrn" checked> Ornamen bawah</label><label class="check"><input type="checkbox" id="showTopOrn" checked> Ornamen atas belakang</label><label class="check"><input type="checkbox" id="showBorders" checked> Bingkai</label></div>
-      </section>
-
-      <section class="panel action-panel">
-        <button id="saveBtn" class="btn primary">Simpan Draft</button><button id="sampleBtn" class="btn">Isi Contoh</button><button id="exportBtn" class="btn">Download JSON</button><label class="btn file">Import JSON<input id="importFile" type="file" accept="application/json"></label><button id="resetBtn" class="btn danger">Reset</button><p id="status" class="status">Draft otomatis aktif.</p>
-      </section>
+      <section class="panel"><h2>Data Mempelai</h2><div class="grid two"><label>Inisial Pria<input id="inisialPria" value="S"></label><label>Inisial Wanita<input id="inisialWanita" value="N"></label></div><label>Nama Mempelai Pria<input id="namaPria"></label><label>Keterangan Pria<textarea id="ketPria" rows="2"></textarea></label><label>Nama Mempelai Wanita<input id="namaWanita"></label><label>Keterangan Wanita<textarea id="ketWanita" rows="2"></textarea></label></section>
+      <section class="panel"><h2>Waktu Penyelenggaraan</h2><label>Hari, Tanggal<input id="tanggal"></label><label>Jam<input id="jam"></label><label>Tempat<textarea id="tempat" rows="2"></textarea></label><label>Hiburan<input id="hiburan"></label></section>
+      <section class="panel"><h2>Kalimat Undangan</h2><label>Kalimat Pembuka<textarea id="pembuka" rows="3"></textarea></label><label>Ucapan Kehormatan<textarea id="ucapan" rows="4"></textarea></label><label>Salam Penutup<input id="salamPenutup"></label><label>Ayat / Kutipan<textarea id="ayat" rows="6"></textarea></label></section>
+      <section class="panel"><h2>Keluarga Pengundang</h2><label>Judul Pengundang<input id="judulPengundang"></label><label>Daftar Keluarga <span>satu baris satu keluarga</span><textarea id="keluarga" rows="10"></textarea></label></section>
+      <section class="panel"><h2>Kertas & Cetak</h2><div class="grid two"><label>Ukuran Kertas<select id="ukuranKertas"><option value="f4">F4 / Folio 21,59 × 33,33 cm</option><option value="a4">A4 21 × 29,7 cm</option><option value="letter">Letter 21,59 × 27,94 cm</option><option value="legal">Legal 21,59 × 35,56 cm</option></select></label><label>Mode Kepadatan<select id="density"><option value="compact">Kompak - aman 1 lembar</option><option value="normal">Normal</option><option value="loose">Longgar</option></select></label></div><div class="grid two"><label>Ukuran Font<select id="fontScale"><option value="small">Kecil</option><option value="medium">Sedang</option><option value="large">Besar</option></select></label><label>Margin Panel<select id="panelPad"><option value="narrow">Sempit</option><option value="medium">Sedang</option><option value="wide">Lebar</option></select></label></div></section>
+      <section class="panel"><h2>Desain Online</h2><div class="grid two"><label>Warna Aksen<select id="warnaAksen"><option value="gold">Emas Klasik</option><option value="rose">Rose Gold</option><option value="emerald">Hijau Islami</option><option value="navy">Biru Royal</option><option value="maroon">Maroon Adat</option></select></label><label>Background<select id="backgroundStyle"><option value="cream">Cream Klasik</option><option value="white">Putih Bersih</option><option value="sand">Pasir Elegan</option><option value="blush">Blush Lembut</option><option value="mint">Mint Segar</option></select></label></div><div class="grid two"><label>Bingkai<select id="frameStyle"><option value="double">Double Line</option><option value="classic">Klasik Sudut</option><option value="thin">Tipis Elegan</option><option value="none">Tanpa Bingkai</option></select></label><label>Vektor / Ornamen<select id="ornamentStyle"><option value="classic">Klasik</option><option value="floral">Floral</option><option value="royal">Royal</option><option value="minimal">Minimal</option><option value="islamic">Islami</option></select></label></div><div class="grid two"><label>Aksesoris Bawah<select id="bottomAccessory"><option value="heart">Hati Ornamen</option><option value="floral">Bunga</option><option value="diamond">Diamond</option><option value="none">Tanpa Aksesoris</option></select></label><label>Label Section<select id="styleLabel"><option value="uppercase">Huruf Besar</option><option value="titlecase">Normal Title</option></select></label></div></section>
+      <section class="panel"><h2>Font</h2><div class="grid two"><label>Font Judul / Nama<select id="fontJudul"><option value="elegant">Elegant Serif</option><option value="roman">Roman Classic</option><option value="garamond">Garamond Style</option><option value="formal">Formal Serif</option><option value="script">Script Lembut</option></select></label><label>Font Isi<select id="fontIsi"><option value="serif">Serif Formal</option><option value="book">Book Classic</option><option value="times">Times</option><option value="sans">Sans Clean</option></select></label></div><label>Font Arab<select id="fontArab"><option value="arabic">Traditional Arabic</option><option value="naskh">Naskh Style</option><option value="serifarab">Serif Arabic</option></select></label></section>
+      <section class="panel"><h2>Tampilkan / Sembunyikan</h2><div class="grid two checks"><label class="check"><input type="checkbox" id="showMonogram" checked> Monogram</label><label class="check"><input type="checkbox" id="showBottomOrn" checked> Ornamen bawah</label><label class="check"><input type="checkbox" id="showTopOrn" checked> Ornamen atas belakang</label><label class="check"><input type="checkbox" id="showBorders" checked> Bingkai</label></div></section>
+      <section class="panel action-panel"><button id="saveBtn" class="btn primary">Simpan Draft</button><button id="sampleBtn" class="btn">Isi Contoh</button><button id="exportBtn" class="btn">Download JSON</button><label class="btn file">Import JSON<input id="importFile" type="file" accept="application/json"></label><button id="resetBtn" class="btn danger">Reset</button><p id="status" class="status">Draft otomatis aktif.</p></section>
     </aside>
-
-    <section class="preview-wrap">
-      <div class="preview-head no-print"><div><strong>Preview Cetak</strong><span>Default F4/Folio. Saat print buka More settings, pilih Paper size F4/Folio, Margins None, Scale Default/100.</span></div><div class="zoom"><button id="minus" class="btn small">-</button><button id="plus" class="btn small">+</button></div></div>
-      <section id="sheet" class="sheet-grid paper-f4 bg-cream accent-gold density-compact font-small pad-narrow frame-double labels-uppercase">
-        <article class="card front-card"></article><article class="card back-card"></article><article class="card front-card"></article><article class="card back-card"></article>
-      </section>
-    </section>
+    <section class="preview-wrap"><div class="preview-head no-print"><div><strong>Preview Cetak</strong><span>Default F4/Folio. Saat print buka More settings, pilih Paper size F4/Folio, Margins None, Scale Default/100.</span></div><div class="zoom"><button id="minus" class="btn small">-</button><button id="plus" class="btn small">+</button></div></div><section id="sheet" class="sheet-grid paper-f4 bg-cream accent-gold density-compact font-small pad-narrow frame-double labels-uppercase"><article class="card front-card"></article><article class="card back-card"></article><article class="card front-card"></article><article class="card back-card"></article></section></section>
   </main>
   <script src="app.js"></script>
 </body>
