@@ -1,6 +1,6 @@
-# Undangan Lokal Premium
+# Isi Undangan Pernikahan
 
-Folder ini berisi aplikasi generator undangan lokal yang dibuat sebagai halaman terpisah dari halaman utama repository.
+Folder ini sekarang dibuat khusus untuk **template isi undangan pernikahan**, mengikuti contoh undangan yang dilampirkan pengguna.
 
 ## Link aplikasi
 
@@ -10,39 +10,48 @@ Jika GitHub Pages sudah aktif, buka:
 https://slee17an-spec.github.io/undangan-premium/lokal/
 ```
 
+## Format yang dipakai
+
+Aplikasi ini tidak lagi memakai satu format untuk semua jenis undangan. Formatnya khusus pernikahan:
+
+1. Sisi kiri undangan:
+   - Monogram inisial mempelai.
+   - Bismillah.
+   - Salam pembuka.
+   - Kalimat permohonan rahmat dan ridha Allah SWT.
+   - Nama mempelai pria.
+   - Nama mempelai wanita.
+   - Waktu penyelenggaraan.
+   - Hari/tanggal, jam, tempat, hiburan.
+   - Ucapan kehormatan dan terima kasih.
+
+2. Sisi kanan undangan:
+   - Salam penutup.
+   - Kutipan Ar-Ruum ayat 21.
+   - Judul "Hormat kami yang mengundang".
+   - Daftar keluarga pengundang.
+
+## Cetak
+
+Tampilan cetak dibuat seperti contoh: **2 pasang undangan dalam 1 lembar A4**, yaitu:
+
+- kiri atas: sisi isi undangan.
+- kanan atas: sisi keluarga pengundang.
+- kiri bawah: sisi isi undangan.
+- kanan bawah: sisi keluarga pengundang.
+
 ## Fitur
 
-- 50+ tipe undangan lokal.
-- Cocok untuk undangan keluarga, agama, desa, sekolah, organisasi, koperasi, usaha, dan acara umum.
-- Model tampilan:
-  - Undangan premium
-  - Surat formal
-  - Kartu ringkas
-  - Amplop nama tamu
-- Tema warna:
-  - Emas
-  - Hijau Islami
-  - Maroon
-  - Biru formal
-  - Ungu
-  - Hitam putih
-  - Floral
-  - Ocean
-- Cetak / simpan PDF dari browser.
-- Cetak semua tamu dari daftar nama.
-- Salin teks undangan untuk WhatsApp.
-- Download/import data JSON.
+- Edit semua teks utama.
+- Edit nama dan keterangan mempelai.
+- Edit waktu, tempat, dan hiburan.
+- Edit ayat/kutipan.
+- Edit daftar keluarga pengundang.
 - Simpan draft otomatis di browser.
-
-## Cara pakai
-
-1. Buka halaman aplikasi.
-2. Pilih jenis undangan.
-3. Isi data acara.
-4. Pilih tema dan model tampilan.
-5. Isi daftar tamu jika ingin cetak massal.
-6. Klik **Cetak / Simpan PDF** atau **Cetak Semua Tamu**.
+- Export/import JSON.
+- Salin teks untuk WhatsApp.
+- Cetak atau simpan PDF dari browser.
 
 ## Catatan
 
-Aplikasi ini tidak memakai server dan tidak memakai database. Data tersimpan di browser melalui `localStorage`.
+Aplikasi ini statis. Tidak memakai server, database, atau login. Data tersimpan di browser melalui `localStorage`.
