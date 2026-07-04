@@ -1,73 +1,21 @@
-const ids = ['inisialPria','inisialWanita','namaPria','ketPria','namaWanita','ketWanita','tanggal','jam','tempat','hiburan','pembuka','ucapan','salamPenutup','ayat','judulPengundang','keluarga'];
-const $ = id => document.getElementById(id);
-let zoom = 0.72;
-const sample = {
-  inisialPria:'S',
-  inisialWanita:'N',
-  namaPria:'Sirpan Bin Abd. Aziz',
-  ketPria:'(Putra ke Dua dari Bapak Abd. Aziz dan Ibu Hajra)',
-  namaWanita:'Nur Binti Hasan',
-  ketWanita:'(Putri ke Dua dari Bapak Hasan dan Ibu Mase)',
-  tanggal:'Minggu, 5 Juli 2026',
-  jam:'19.30 WITA - Selesai',
-  tempat:'Samping Masjid Babul Jannah, Dusun Bugis Desa Kombo',
-  hiburan:'Karya Budaya Electone',
-  pembuka:'Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud melaksanakan pernikahan putra-putri kami',
-  ucapan:'Merupakan Suatu Kehormatan & Kebahagiaan bagi kami apabila Bapak / Ibu / Sdr (i) berkenan hadir memberikan Do’a Restu kepada kedua mempelai.\n\nAtas Kehadiran dan Do’a Restu Bapak / Ibu / Sdr (i), kami sekeluarga mengucapkan banyak terima kasih.',
-  salamPenutup:'Wassalamu Alaikum Warahmatullahi Wabarakatuh.',
-  ayat:'“Dan diantara tanda - tanda (kebesaran-Nya) ialah Dia menciptakan pasangan - pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tentram kepadanya, dan Dia menjadikan diantaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar - benar terdapat tanda - tanda (kebesaran Allah) bagi kaum yang berpikir”\n\n(Surat Ar-Ruum : 21)',
-  judulPengundang:'Hormat kami yang mengundang :',
-  keluarga:'Kel. Abd. Aziz & Hajra\nKel. Asri Dg. Maroa & Hadiati Guru Hade\nKel. Kamaruddin & Rasidina\nKel. Hi. Usman & Hj. Barlian\nKel. Aripiddin & Asrida\nKel. Hi. Syahrir Dg. Ngesa & Hj. Nirma\nKel. Jufriansa Hi. Syahrir & Hasira, A.Md. Keb\nKel. Hi. Kuruseng & Hj. Rahmawati\nKel. Zainal Hi. Abd. Hamid'
-};
-function esc(value){return String(value || '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;').replaceAll('\n','<br>')}
-function data(){const out={}; ids.forEach(id => out[id] = ($(id)?.value || '').trim()); return out}
-function setData(obj){ids.forEach(id => { if($(id) && obj[id] !== undefined) $(id).value = obj[id]; }); render()}
-function families(text){return String(text || '').split(/\r?\n/).map(x => x.trim()).filter(Boolean)}
-function front(d){return `
-  <span class="corner-bottom-left">❦</span><span class="corner-bottom-right">❦</span>
-  <div class="mono">${esc(d.inisialPria || 'S')}<span>&nbsp;|&nbsp;</span>${esc(d.inisialWanita || 'N')}</div>
-  <div class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
-  <p class="salam">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
-  <p class="intro">${esc(d.pembuka)}</p>
-  <div class="ornline"><span>✤</span></div>
-  <h2 class="name">${esc(d.namaPria)}</h2>
-  <p class="name-note">${esc(d.ketPria)}</p>
-  <div class="with">Dengan</div>
-  <h2 class="name">${esc(d.namaWanita)}</h2>
-  <p class="name-note">${esc(d.ketWanita)}</p>
-  <div class="section-title">Waktu Penyelenggaraan</div>
-  <table class="detail">
-    <tr><td class="ico">▣</td><td class="lab">Hari, Tanggal</td><td class="colon">:</td><td>${esc(d.tanggal)}</td></tr>
-    <tr><td class="ico">◷</td><td class="lab">Jam</td><td class="colon">:</td><td>${esc(d.jam)}</td></tr>
-    <tr><td class="ico">◆</td><td class="lab">Tempat</td><td class="colon">:</td><td>${esc(d.tempat)}</td></tr>
-    <tr><td class="ico">♫</td><td class="lab">Hiburan</td><td class="colon">:</td><td>${esc(d.hiburan)}</td></tr>
-  </table>
-  <div class="ornline"><span>✤</span></div>
-  <p class="thanks">${esc(d.ucapan)}</p>
-  <div class="bottom-orn">♡ ❦ ♡</div>
-`}
-function back(d){const list = families(d.keluarga); return `
-  <span class="corner-bottom-left">❦</span><span class="corner-bottom-right">❦</span>
-  <div class="top-orn">❦</div>
-  <p class="closing-salam">${esc(d.salamPenutup)}</p>
-  <div class="ornline"><span>✤</span></div>
-  <p class="ayat">${esc(d.ayat)}</p>
-  <h3 class="invite-title">${esc(d.judulPengundang)}</h3>
-  <div class="families">${list.map(item => `<div class="family">${esc(item)}</div>`).join('')}</div>
-  <div class="bottom-orn">♡ ❦ ♡</div>
-`}
-function render(){const d = data(); document.querySelectorAll('.front-card').forEach(el => el.innerHTML = front(d)); document.querySelectorAll('.back-card').forEach(el => el.innerHTML = back(d)); $('sheet').style.setProperty('--zoom', zoom); localStorage.setItem('undangan-pernikahan-draft', JSON.stringify(d)); $('status').textContent = 'Draft tersimpan otomatis.'}
-function load(){try{const raw = localStorage.getItem('undangan-pernikahan-draft'); if(raw){setData(JSON.parse(raw)); return true}}catch(e){} setData(sample); return false}
-function download(name, content, type='application/json'){const blob = new Blob([content], {type}); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url)}
-function copyWa(){const d = data(); const txt = `Assalamu'alaikum Warahmatullahi Wabarakatuh\n\n${d.pembuka}\n\n${d.namaPria}\n${d.ketPria}\n\nDengan\n\n${d.namaWanita}\n${d.ketWanita}\n\nHari/Tanggal: ${d.tanggal}\nJam: ${d.jam}\nTempat: ${d.tempat}\nHiburan: ${d.hiburan}\n\n${d.ucapan}\n\n${d.salamPenutup}`; navigator.clipboard?.writeText(txt).then(()=>alert('Teks undangan WhatsApp disalin.')).catch(()=>alert(txt))}
-ids.forEach(id => $(id)?.addEventListener('input', render));
-$('saveBtn').onclick = () => { render(); alert('Draft tersimpan di browser ini.') };
-$('sampleBtn').onclick = () => setData(sample);
-$('resetBtn').onclick = () => { if(confirm('Reset ke contoh awal?')) { localStorage.removeItem('undangan-pernikahan-draft'); setData(sample); } };
-$('exportBtn').onclick = () => download('data-undangan-pernikahan.json', JSON.stringify(data(), null, 2));
-$('importFile').onchange = e => { const file = e.target.files[0]; if(!file) return; const reader = new FileReader(); reader.onload = () => { try{ setData(JSON.parse(reader.result)); }catch(err){ alert('File JSON tidak valid.'); } }; reader.readAsText(file); };
-$('printBtn').onclick = () => window.print();
-$('copyBtn').onclick = copyWa;
-$('plus').onclick = () => { zoom = Math.min(1, +(zoom + .04).toFixed(2)); render(); };
-$('minus').onclick = () => { zoom = Math.max(.38, +(zoom - .04).toFixed(2)); render(); };
-load();
+const ids=['inisialPria','inisialWanita','namaPria','ketPria','namaWanita','ketWanita','tanggal','jam','tempat','hiburan','pembuka','ucapan','salamPenutup','ayat','judulPengundang','keluarga','ukuranKertas','warnaAksen','backgroundStyle','ornamentStyle','fontJudul','fontIsi','fontArab','styleLabel'];
+const checks=['showMonogram','showBottomOrn','showTopOrn','showBorders'];
+const $=id=>document.getElementById(id);let zoom=.62;
+const sample={inisialPria:'S',inisialWanita:'N',namaPria:'Sirpan Bin Abd. Aziz',ketPria:'(Putra ke Dua dari Bapak Abd. Aziz dan Ibu Hajra)',namaWanita:'Nur Binti Hasan',ketWanita:'(Putri ke Dua dari Bapak Hasan dan Ibu Mase)',tanggal:'Minggu, 5 Juli 2026',jam:'19.30 WITA - Selesai',tempat:'Samping Masjid Babul Jannah, Dusun Bugis Desa Kombo',hiburan:'Karya Budaya Electone',pembuka:'Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud melaksanakan pernikahan putra-putri kami',ucapan:'Merupakan Suatu Kehormatan & Kebahagiaan bagi kami apabila Bapak / Ibu / Sdr (i) berkenan hadir memberikan Do’a Restu kepada kedua mempelai.\n\nAtas Kehadiran dan Do’a Restu Bapak / Ibu / Sdr (i), kami sekeluarga mengucapkan banyak terima kasih.',salamPenutup:'Wassalamu Alaikum Warahmatullahi Wabarakatuh.',ayat:'“Dan diantara tanda - tanda (kebesaran-Nya) ialah Dia menciptakan pasangan - pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tentram kepadanya, dan Dia menjadikan diantaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar - benar terdapat tanda - tanda (kebesaran Allah) bagi kaum yang berpikir”\n\n(Surat Ar-Ruum : 21)',judulPengundang:'Hormat kami yang mengundang :',keluarga:'Kel. Abd. Aziz & Hajra\nKel. Asri Dg. Maroa & Hadiati Guru Hade\nKel. Kamaruddin & Rasidina\nKel. Hi. Usman & Hj. Barlian\nKel. Aripiddin & Asrida\nKel. Hi. Syahrir Dg. Ngesa & Hj. Nirma\nKel. Jufriansa Hi. Syahrir & Hasira, A.Md. Keb\nKel. Hi. Kuruseng & Hj. Rahmawati\nKel. Zainal Hi. Abd. Hamid',ukuranKertas:'f4',warnaAksen:'gold',backgroundStyle:'cream',ornamentStyle:'classic',fontJudul:'elegant',fontIsi:'serif',fontArab:'arabic',styleLabel:'uppercase',showMonogram:true,showBottomOrn:true,showTopOrn:true,showBorders:true};
+const titleFonts={elegant:"Georgia,'Times New Roman',serif",roman:"'Palatino Linotype','Book Antiqua',Palatino,serif",garamond:"Garamond,Georgia,serif",formal:"'Times New Roman',Times,serif",script:"'Brush Script MT','Lucida Handwriting',cursive"};
+const bodyFonts={serif:"Georgia,'Times New Roman',serif",book:"'Book Antiqua','Palatino Linotype',Palatino,serif",times:"'Times New Roman',Times,serif",sans:"Arial,Helvetica,sans-serif"};
+const arabFonts={arabic:"'Traditional Arabic','Times New Roman',serif",naskh:"'Arabic Typesetting','Times New Roman',serif",serifarab:"Georgia,'Times New Roman',serif"};
+const orn={classic:['❦','✤','♡ ❦ ♡'],floral:['✿','✿','❀ ✿ ❀'],royal:['✦','✦','◆ ✦ ◆'],minimal:['•','•','— • —']};
+function esc(v){return String(v||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;').replaceAll('\n','<br>')}
+function data(){const o={};ids.forEach(id=>o[id]=($(id)?.value||'').trim());checks.forEach(id=>o[id]=!!$(id)?.checked);return o}
+function setData(o){ids.forEach(id=>{if($(id)&&o[id]!==undefined)$(id).value=o[id]});checks.forEach(id=>{if($(id)&&o[id]!==undefined)$(id).checked=!!o[id]});render()}
+function families(t){return String(t||'').split(/\r?\n/).map(x=>x.trim()).filter(Boolean)}
+function shape(d){let s=(orn[d.ornamentStyle]||orn.classic)[0];return `<span class="shape tl">${s}</span><span class="shape tr">${s}</span><span class="shape bl">${s}</span><span class="shape br">${s}</span>`}
+function front(d){let o=orn[d.ornamentStyle]||orn.classic;return `${shape(d)}${d.showMonogram?`<div class="mono">${esc(d.inisialPria||'S')}<span>&nbsp;|&nbsp;</span>${esc(d.inisialWanita||'N')}</div>`:''}<div class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div><p class="salam">Assalamu'alaikum Warahmatullahi Wabarakatuh</p><p class="intro">${esc(d.pembuka)}</p><div class="line"><span>${o[1]}</span></div><h2 class="name">${esc(d.namaPria)}</h2><p class="name-note">${esc(d.ketPria)}</p><div class="with">Dengan</div><h2 class="name">${esc(d.namaWanita)}</h2><p class="name-note">${esc(d.ketWanita)}</p><div class="section-title">Waktu Penyelenggaraan</div><table class="detail"><tr><td class="ico">▣</td><td class="lab">Hari, Tanggal</td><td class="colon">:</td><td>${esc(d.tanggal)}</td></tr><tr><td class="ico">◷</td><td class="lab">Jam</td><td class="colon">:</td><td>${esc(d.jam)}</td></tr><tr><td class="ico">◆</td><td class="lab">Tempat</td><td class="colon">:</td><td>${esc(d.tempat)}</td></tr><tr><td class="ico">♫</td><td class="lab">Hiburan</td><td class="colon">:</td><td>${esc(d.hiburan)}</td></tr></table><div class="line"><span>${o[1]}</span></div><p class="thanks">${esc(d.ucapan)}</p>${d.showBottomOrn?`<div class="bottom-orn">${o[2]}</div>`:''}`}
+function back(d){let o=orn[d.ornamentStyle]||orn.classic;return `${shape(d)}${d.showTopOrn?`<div class="top-orn">${o[0]}</div>`:''}<p class="closing-salam">${esc(d.salamPenutup)}</p><div class="line"><span>${o[1]}</span></div><p class="ayat">${esc(d.ayat)}</p><h3 class="invite-title">${esc(d.judulPengundang)}</h3><div class="families">${families(d.keluarga).map(x=>`<div class="family">${esc(x)}</div>`).join('')}</div>${d.showBottomOrn?`<div class="bottom-orn">${o[2]}</div>`:''}`}
+function apply(d){let s=$('sheet');s.className=`sheet-grid paper-${d.ukuranKertas||'f4'} bg-${d.backgroundStyle||'cream'} accent-${d.warnaAksen||'gold'} ${d.showBorders?'bordered':''}`;s.style.setProperty('--zoom',zoom);s.style.setProperty('--title-font',titleFonts[d.fontJudul]||titleFonts.elegant);s.style.setProperty('--body-font',bodyFonts[d.fontIsi]||bodyFonts.serif);s.style.setProperty('--arab-font',arabFonts[d.fontArab]||arabFonts.arabic)}
+function render(){const d=data();apply(d);document.querySelectorAll('.front-card').forEach(e=>e.innerHTML=front(d));document.querySelectorAll('.back-card').forEach(e=>e.innerHTML=back(d));localStorage.setItem('template-undangan-pernikahan',JSON.stringify(d));$('status').textContent=`Draft tersimpan otomatis. Ukuran aktif: ${$('ukuranKertas').selectedOptions[0].textContent}`}
+function load(){try{let r=localStorage.getItem('template-undangan-pernikahan');if(r){setData(JSON.parse(r));return}}catch(e){}setData(sample)}
+function download(name,content,type='application/json'){let b=new Blob([content],{type}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(u)}
+function copyWa(){const d=data(),txt=`Assalamu'alaikum Warahmatullahi Wabarakatuh\n\n${d.pembuka}\n\n${d.namaPria}\n${d.ketPria}\n\nDengan\n\n${d.namaWanita}\n${d.ketWanita}\n\nHari/Tanggal: ${d.tanggal}\nJam: ${d.jam}\nTempat: ${d.tempat}\nHiburan: ${d.hiburan}\n\n${d.ucapan}\n\n${d.salamPenutup}`;navigator.clipboard?.writeText(txt).then(()=>alert('Teks undangan WhatsApp disalin.')).catch(()=>alert(txt))}
+ids.forEach(id=>$(id)?.addEventListener('input',render));checks.forEach(id=>$(id)?.addEventListener('change',render));$('saveBtn').onclick=()=>{render();alert('Draft tersimpan di browser ini.')};$('sampleBtn').onclick=()=>setData(sample);$('resetBtn').onclick=()=>{if(confirm('Reset ke contoh awal?')){localStorage.removeItem('template-undangan-pernikahan');setData(sample)}};$('exportBtn').onclick=()=>download('template-undangan-pernikahan.json',JSON.stringify(data(),null,2));$('importFile').onchange=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{setData(JSON.parse(r.result))}catch{alert('File JSON tidak valid.')}};r.readAsText(f)};$('printBtn').onclick=()=>window.print();$('copyBtn').onclick=copyWa;$('plus').onclick=()=>{zoom=Math.min(1,+(zoom+.04).toFixed(2));render()};$('minus').onclick=()=>{zoom=Math.max(.28,+(zoom-.04).toFixed(2));render()};load();
