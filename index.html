@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Undangan Aziza & Kifli</title>
+<title>Undangan Sirpan & Nur</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -24,8 +24,8 @@
 <div class="coverContent">
 
 <p class="date">
-Senin<br>
-30 Maret 2026
+Minggu<br>
+5 Juli 2026
 </p>
 
 <h1 class="monogram">
@@ -33,7 +33,7 @@ Senin<br>
 </h1>
 
 <h2 class="couple">
-AZIZA & KIFLI
+SIRPAN & NUR
 </h2>
 
 <p class="save">
@@ -41,7 +41,6 @@ SAVE THE DATE
 </p>
 
 <br>
-
 <p>Kepada Yth</p>
 <h3 id="nama-tamu">Tamu Undangan</h3>
 
@@ -108,12 +107,12 @@ untuk menghadiri resepsi pernikahan kami
 
 
 <h2 class="gold">
-Wafiah Aziza
+Sirpan Bin Abd. Aziz
 </h2>
 
-<p>Putri pertama dari</p>
+<p>Putra kedua dari</p>
 
-<p>Bapak Takdir & Ibu Hj. Sarini</p>
+<p>Bapak Abd. Aziz & Ibu Hajra</p>
 
 
 <p class="dengan">
@@ -122,12 +121,12 @@ DENGAN
 
 
 <h2 class="gold">
-Sulkifli
+Nur Binti Hasan
 </h2>
 
-<p>Putra pertama dari</p>
+<p>Putra Kedua dari</p>
 
-<p>Bapak Basri & Ibu Suryani</p>
+<p>Bapak Hasan & Ibu Mase</p>
 
 
 </div>
@@ -211,11 +210,11 @@ AKAD NIKAH
 </h1>
 
 <p class="dateBig">
-Senin, 30 Maret 2026
+Minggu, 5 Juli 2026
 </p>
 
 <p>
-Pukul 19.00 WITA
+Pukul 19.30 WITA
 </p>
 
 <br>
@@ -225,8 +224,9 @@ LOKASI ACARA
 </p>
 
 <p>
-Dusun Timundu<br>
-Desa Kombo Kecamatan Dampal Selatan Kab. Tolitoli
+Samping Masjid "BABUL JANNAH"<br>
+Dusun Bugis Desa Kombo <br>
+Kecamatan Dampal Selatan Kab. Tolitoli
 </p>
 
 </div>
@@ -288,7 +288,7 @@ Salin Nomor
 5226 01 037954 53 6
 </p>
 
-<p>a.n Wafiah Aziza</p>
+<p>a.n Sirpan</p>
 
 </div>
 
@@ -301,7 +301,7 @@ Alamat Pengiriman Kado
 </p>
 
 <p>
-Dusun Timundu<br>
+Dusun Bugis<br>
 Desa Kombo Kecamatan Dampal Selatan Kab. Tolitoli
 </p>
 
@@ -326,40 +326,6 @@ Desa Kombo Kecamatan Dampal Selatan Kab. Tolitoli
 <button id="music-btn">🔊</button>
 
 <script src="script.js"></script>
-<script>
-const urlParams = new URLSearchParams(window.location.search)
-let nama = urlParams.get("to")
-
-if (nama) {
-
-  nama = decodeURIComponent(nama).trim()
-
-  let sapaan = "Bapak/Ibu"
-  const namaLower = nama.toLowerCase()
-
-  // deteksi & hapus sapaan dari URL
-  if (namaLower.startsWith("bapak ")) {
-    sapaan = "Bapak"
-    nama = nama.replace(/^bapak\s+/i, "")
-  } else if (namaLower.startsWith("ibu ")) {
-    sapaan = "Ibu"
-    nama = nama.replace(/^ibu\s+/i, "")
-  }
-
-  // rapikan koma & spasi
-  nama = nama.replace(/,/g, ", ")
-  nama = nama.replace(/\s+/g, " ").trim()
-
-  // kapitalisasi tiap kata
-  nama = nama.split(" ").map(kata => {
-    return kata.charAt(0).toUpperCase() + kata.slice(1)
-  }).join(" ")
-
-  // tampilkan ke HTML
-  document.getElementById("nama-tamu").innerText =
-    sapaan + " " + nama
-}
-</script>
   
 </body>
 </html>
